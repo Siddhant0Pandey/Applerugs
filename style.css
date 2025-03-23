@@ -1499,7 +1499,8 @@ html,body {
 		position: fixed;
 		top: 0; 
 		bottom: 0;
-		background: #fff;
+			background-color: #7F1416;
+		
 		z-index : 1800;
 		text-align:center;
 		display: flex;
