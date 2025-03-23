@@ -1172,7 +1172,7 @@
   -webkit-transition: opacity 0.1s ease-out;
   transition: opacity 0.1s ease-out;
   cursor: pointer;
-  opacity: 0.2;
+  opacity: 0.6;
 }
 
 .team-list-captions li.active {
