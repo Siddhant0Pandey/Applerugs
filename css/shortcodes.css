@@ -2791,7 +2791,7 @@ input[type="submit"] {
   left: 0;
   bottom: 0;
   z-index: 0;
-  background-color: currentColor;
+  background-color: black;
   -webkit-transition: all 0.2s ease-out 0s;
   transition: all 0.2s ease-out 0s;
 }
