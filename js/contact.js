@@ -63,7 +63,7 @@ Function Contact Map
 							"saturation": 36
 						},
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 40
@@ -78,7 +78,7 @@ Function Contact Map
 							"visibility": "on"
 						},
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 16
@@ -99,7 +99,7 @@ Function Contact Map
 					"elementType": "geometry.fill",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 20
@@ -111,7 +111,7 @@ Function Contact Map
 					"elementType": "geometry.stroke",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 17
@@ -126,7 +126,7 @@ Function Contact Map
 					"elementType": "geometry",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 20
@@ -138,7 +138,7 @@ Function Contact Map
 					"elementType": "geometry",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 21
@@ -150,7 +150,7 @@ Function Contact Map
 					"elementType": "geometry.fill",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 17
@@ -162,7 +162,7 @@ Function Contact Map
 					"elementType": "geometry.stroke",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 29
@@ -177,7 +177,7 @@ Function Contact Map
 					"elementType": "geometry",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 18
@@ -189,7 +189,7 @@ Function Contact Map
 					"elementType": "geometry",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 16
@@ -201,7 +201,7 @@ Function Contact Map
 					"elementType": "geometry",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 19
@@ -213,7 +213,7 @@ Function Contact Map
 					"elementType": "geometry",
 					"stylers": [
 						{
-							"color": "#000000"
+							"color": "#fff000"
 						},
 						{
 							"lightness": 17
@@ -241,7 +241,7 @@ Function Contact Map
 			var contentString = '<div id="content-map-marker" style="text-align:center; padding-top:10px; padding-left:10px">'+
 				'<div id="siteNotice">'+
 				'</div>'+
-				'<h4 id="firstHeading" class="firstHeading" style="color:#000!important; font-weight:600; margin-bottom:0px;">Hello Friend!</h4>'+
+				'<h4 id="firstHeading" class="firstHeading" style="color:#fff!important; font-weight:600; margin-bottom:0px;">Hello Friend!</h4>'+
 				'<div id="bodyContent">'+
 				'<p color:#999; font-size:14px; margin-bottom:10px">Here we are. Come to drink a coffee!</p>'+
 				'</div>'+
