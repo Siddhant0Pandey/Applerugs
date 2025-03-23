@@ -1906,19 +1906,19 @@ class ClapatGridPreview {
               gsap.to(".classic-menu .flexnav li", {
                 duration: 0.5,
                 delay: 0.15,
-                color: "#000",
+                color: "#fff",
                 ease: Power2.easeInOut,
               }),
               gsap.to("header .button-wrap.menu", {
                 duration: 0.5,
                 delay: 0.15,
-                color: "#000",
+                color: "#fff",
                 ease: Power2.easeInOut,
               }),
               gsap.to("header .button-icon-link", {
                 duration: 0.5,
                 delay: 0.15,
-                color: "#000",
+                color: "#fff",
                 boxShadow: "inset 0 0 15px rgba(0,0,0,0.3)",
                 ease: Power2.easeInOut,
               }),
@@ -1927,7 +1927,7 @@ class ClapatGridPreview {
                 {
                   duration: 0.5,
                   delay: 0.15,
-                  color: "#000",
+                  color: "#fff",
                   ease: Power2.easeInOut,
                 }
               ))
@@ -2030,19 +2030,19 @@ class ClapatGridPreview {
                 gsap.to(".classic-menu .flexnav li", {
                   duration: 0.5,
                   delay: 0.15,
-                  color: "#000",
+                  color: "#fff",
                   ease: Power2.easeInOut,
                 }),
                 gsap.to("header .button-wrap.menu", {
                   duration: 0.5,
                   delay: 0.15,
-                  color: "#000",
+                  color: "#fff",
                   ease: Power2.easeInOut,
                 }),
                 gsap.to("header .button-icon-link", {
                   duration: 0.5,
                   delay: 0.15,
-                  color: "#000",
+                  color: "#fff",
                   boxShadow: "inset 0 0 15px rgba(0,0,0,0.3)",
                   ease: Power2.easeInOut,
                 }),
@@ -2051,7 +2051,7 @@ class ClapatGridPreview {
                   {
                     duration: 0.5,
                     delay: 0.15,
-                    color: "#000",
+                    color: "#fff",
                     ease: Power2.easeInOut,
                   }
                 ))),

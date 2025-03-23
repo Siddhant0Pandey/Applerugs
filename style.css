@@ -38,7 +38,7 @@ Primary use:	Showcase Portfolio
 		height:100%;
 		width:100%;
 		color:#777;
-		background-color:#000;
+		background-color:#fff;
 		letter-spacing:-0.15px;
 		user-select: none; /* supported by Chrome and Opera */
 		-webkit-user-select: none; /* Safari */
@@ -124,7 +124,7 @@ html,body {
 	b,
 	strong {
 		font-weight: 600;
-		color:#000;
+		color:#fff;
 	}
 	
 	.light-content b, .light-content strong, .dark-section b, .dark-section strong {
@@ -134,7 +134,7 @@ html,body {
 	
 	.light-content .light-section b, .light-content .light-section strong {
 		font-weight: 600;
-		color:#000;
+		color:#fff;
 	}
 	
 	cite,
@@ -151,7 +151,7 @@ html,body {
 	}
 	
 	mark, ins {
-		background: none repeat scroll 0 0 #000;
+		background: none repeat scroll 0 0 #fff;
 		text-decoration: none;
 		color: #fff;
 		padding: 2px 8px;
@@ -161,7 +161,7 @@ html,body {
 	
 	.light-content mark, .light-content ins, .dark-section mark, .dark-section ins {
 		background: none repeat scroll 0 0 #fff;
-		color:#000;
+		color:#fff;
 	}
 	
 	.light-content .light-section mark, .light-content .light-section ins {
@@ -182,7 +182,7 @@ html,body {
 		-ms-hyphens:     none;
 		hyphens:         none;
 		line-height: 1.6;
-		color:#000;
+		color:#fff;
 	}
 	
 	pre {
@@ -206,7 +206,7 @@ html,body {
 	
 	.light-content .light-section pre {
 		background-color:rgba(0,0,0,0.05);
-		color:#000;
+		color:#fff;
 	}
 	
 	blockquote,
@@ -227,7 +227,7 @@ html,body {
 	}
 	
 	blockquote {
-		color: #000;
+		color: #fff;
 		line-height: 1.6;
 		font-size: 1.5rem;
 		margin-bottom: 2.1875rem;
@@ -242,7 +242,7 @@ html,body {
 	}
 	
 	.light-content .light-section blockquote {
-		color: #000;
+		color: #fff;
 	}
 	
 	blockquote::before {
@@ -465,7 +465,7 @@ html,body {
 	}
 	
 	.light-content thead tr, .dark-section thead tr {
-		color:#000;
+		color:#fff;
 	}
 	
 	tr, .light-content .light-section tr {
@@ -552,13 +552,13 @@ html,body {
 	}
 	
 	::selection {
-		background: #000;
+		background: #fff;
 		color: #fff;
 		text-shadow: none;
 	}
 	
 	::-moz-selection {
-		background: #000;
+		background: #fff;
 		color: #fff;
 		text-shadow: none;
 	}
@@ -573,7 +573,7 @@ html,body {
 	h1, h2, h3, h4, h5, h6 {		
 		font-family:inherit;
 		font-weight:600;
-		color:#000;
+		color:#fff;
 		margin-bottom:20px;
 		letter-spacing:-0.1vw;
 	}
@@ -647,7 +647,7 @@ html,body {
 	}
 	
 	.light-content .light-section h1, .light-content .light-section h2, .light-content .light-section h3, .light-content .light-section h4, .light-content .light-section h5, .light-content .light-section h6 {
-		color: #000;
+		color: #fff;
 	}
 	
 	p {
@@ -655,7 +655,7 @@ html,body {
 		line-height: 28px;
 		font-weight:400;
 		margin-bottom: 10px;
-		color:#000;		
+		color:#fff;		
 	}
 	
 	.light-content p, .dark-section p {
@@ -663,7 +663,7 @@ html,body {
 	}
 	
 	.light-content .light-section p {
-		color:#000;
+		color:#fff;
 	}
 	
 	.bigger {
@@ -692,12 +692,12 @@ html,body {
 	
 	a:hover, a:active {
 	  outline: 0;
-	  color: #000;
+	  color: #7F1416;
 	}
 	
 	a, .light-content .light-section a {
 		text-decoration: none;
-		color: #000;
+		color: #fff;
 		outline: 0;
 	}
 	
@@ -706,7 +706,7 @@ html,body {
 	}
 	
 	.light-content .white-header a { 
-		color:#000;		
+		color:#fff;		
 	}
 	
 	a:hover {
@@ -890,7 +890,7 @@ html,body {
 	}
 	
 	i.arrow-icon {
-		border: solid #000;
+		border: solid #fff;
 		border-width: 0px 3px 3px 0px;
 		box-sizing:border-box;
 		display: block;
@@ -907,7 +907,7 @@ html,body {
 	}
 	
 	.light-content .change-header i.arrow-icon, .dark-content .change-header i.arrow-icon {
-		border: solid #000;
+		border: solid #fff;
 		border-width: 0px 3px 3px 0px;
 	}
 	
@@ -1159,7 +1159,7 @@ html,body {
 	}
 	
 	.light-content #ball-drag-x:before {
-		color:#000;
+		color:#fff;
 	}
 	
 	#ball-drag-x::after {
@@ -1182,11 +1182,11 @@ html,body {
 	}
 	
 	.light-content #ball-drag-x:before, .light-content #ball-drag-x:after {
-		color:#000;
+		color:#fff;
 	}
 	
 	.drag-cursor-white #ball-drag-x:before, .drag-cursor-white #ball-drag-x:after {
-		color:#000;
+		color:#fff;
 	}
 	
 	.drag-cursor-black #ball-drag-x:before, .drag-cursor-black #ball-drag-x:after {
@@ -1239,7 +1239,7 @@ html,body {
 	}
 	
 	.light-content #ball-drag-y:before {
-		color:#000;
+		color:#fff;
 	}
 	
 	.scale-drag-y #ball-drag-y:before {
@@ -1268,7 +1268,7 @@ html,body {
 	}
 	
 	.light-content #ball-drag-y:after {
-		color:#000;
+		color:#fff;
 	}
 	
 	.scale-drag-y #ball-drag-y:after {
@@ -1352,7 +1352,7 @@ html,body {
 	}
 	
 	.drag-cursor-white #ball i, .drag-cursor-white #ball.with-icon i {
-		color:#000;
+		color:#fff;
 	}
 	
 	.drag-cursor-black #ball i, .drag-cursor-black #ball.with-icon i {
@@ -1360,7 +1360,7 @@ html,body {
 	}
 	
 	.light-content #ball.with-icon.dark-icon i {
-		color:#000;
+		color:#fff;
 	}
 	
 	.scale-up #ball i {
@@ -1499,7 +1499,8 @@ html,body {
 		position: fixed;
 		top: 0; 
 		bottom: 0;
-		background: #000;
+			background-color: #7F1416;
+		
 		z-index : 1800;
 		text-align:center;
 		display: flex;
@@ -1528,8 +1529,8 @@ html,body {
 		box-sizing:border-box;
 		padding:60px 0;
 		overflow:hidden;
-		mask-image: linear-gradient(180deg, transparent 5%, #000 15%, #000 85%, transparent 95%);
-  		-webkit-mask-image: linear-gradient(180deg, transparent 5%, #000 15%, #000 85%, transparent 95%);
+		mask-image: linear-gradient(180deg, transparent 5%, #fff 15%, #fff 85%, transparent 95%);
+  		-webkit-mask-image: linear-gradient(180deg, transparent 5%, #fff 15%, #fff 85%, transparent 95%);
 	}
 	
 	.percentage {
@@ -1627,7 +1628,7 @@ html,body {
 	.loadbar-inner {
 		width: 100%;
 		height: 100%;
-		background: #000;
+		background: #fff;
 		position: absolute;
 		top: 0px;
 		left: auto;
@@ -1735,7 +1736,7 @@ html,body {
 	
 	#clapat-logo img {
 		display: block;
-		height: 50px;
+		height: 30px;
 		width: auto;
 		max-width:none;
 		
@@ -1823,7 +1824,7 @@ html,body {
 			border:1px solid rgb(255,255,255);
 			border-radius:3px;
 			background-color:#fff;
-			color:#000;
+			color:#fff;
 		}
 		
 		.classic-menu .clapat-nav-wrapper {
@@ -1871,7 +1872,7 @@ html,body {
 			background: transparent none repeat scroll 0 0;
 			padding-left:15px;
 			padding-right:15px;
-			color:#000;	
+			color:#fff;	
 		}
 		
 		.light-content .classic-menu .flexnav li { 
@@ -1879,7 +1880,7 @@ html,body {
 		}
 		
 		.light-content  .classic-menu.white-header .flexnav li { 
-			color:#000;		
+			color:#fff;		
 		}
 		
 		.classic-menu.white-header .flexnav li { 
@@ -2013,11 +2014,11 @@ html,body {
 		
 		.classic-menu.white-header .flexnav li a  a span::before {
 			background-color:#fff;
-			color:#000;	
+			color:#fff;	
 		}
 		
 		.light-content .classic-menu.white-header .flexnav li a span::before {
-			background-color:#000;
+			background-color:#fff;
 			color:#fff;
 		}
 		
@@ -2119,7 +2120,7 @@ html,body {
 			height: 0;
 			border-style: solid;
 			border-width: 0 10px 9px;
-			border-color: transparent transparent #000;
+			border-color: transparent transparent #fff;
 			-webkit-transform: rotate(-90deg);
 			transform: rotate(-90deg);
 		}
@@ -2143,11 +2144,11 @@ html,body {
 		}
 		
 		.classic-menu .flexnav ul li ul li a {
-			background: #000;
+			background: #fff;
 		}
 		
 		.classic-menu .flexnav ul li ul li ul li a {
-			background: #000;
+			background: #fff;
 		}
 		
 		.classic-menu .flexnav li ul.flexnav-show {
@@ -2256,7 +2257,7 @@ html,body {
 		}
 		
 		.fullscreen-menu .flexnav li a {
-			color:#000;
+			color:#fff;
 		}
 		
 		.fullscreen-menu.invert-header .flexnav li a {
@@ -2389,7 +2390,7 @@ html,body {
 	  height: 5px;
 	  width: 5px;
 	  border-radius:5px;
-	  background-color: #000;
+	  background-color: #fff;
 	  opacity: 1;
 	  top:8px;
 	  left:0;
@@ -2530,7 +2531,7 @@ html,body {
 	}
 	
 	.dark-content-header .button-wrap.menu {
-		color:#000!important;
+		color:#fff!important;
 	}
 	
 	.light-content-header .button-wrap.menu {
@@ -2551,7 +2552,7 @@ html,body {
 		border-radius: 44px;		
 		position: relative;
 		cursor:pointer;
-		color:#000;
+		color:#fff;
 		border:2px solid currentColor;
 		box-sizing:border-box;
 		box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
@@ -2564,7 +2565,7 @@ html,body {
 	}
 	
 	.light-content  .white-header .button-icon-link { 
-		border:2px solid #000;
+		border:2px solid #fff;
 		box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
 	}
 	
@@ -2617,7 +2618,7 @@ html,body {
 	.button-icon-link .button-icon {
 		height: 36px;
 		width: 36px;
-		color: #000;
+		color: #fff;
 		text-align: center;
 		line-height: 36px;
 		font-size: 14px;
@@ -2626,7 +2627,7 @@ html,body {
 	}
 	
 	.light-content .button-icon-link .button-icon {
-  		color: #000;
+  		color: #fff;
 	}
 	
 	.button-icon-link .button-icon i {
@@ -2756,7 +2757,7 @@ html,body {
 		height: 30px;
 		overflow: hidden;
 		line-height: 30px;
-		color: #000;
+		color: #fff;
 		pointer-events: initial;
 		display: table;
 		width: auto;
@@ -2774,7 +2775,7 @@ html,body {
 	.socials-wrap {
 		position:relative;
 		float: right;
-		color: #000;
+		color: #fff;
 		width: 240px;
 		height: 160px;
 		box-sizing: border-box;
@@ -2917,7 +2918,7 @@ html,body {
 	}
 	
 	.socials li a {
-		color: #000;
+		color: #fff;
 		display: block;
 		height: 40px;
 		width: 40px;		
@@ -2932,7 +2933,7 @@ html,body {
 	}
 	
 	.socials li a:hover {
-		color: #000;
+		color: #fff;
 		opacity:1;
 	}
 	
@@ -2956,7 +2957,7 @@ html,body {
 		pointer-events: initial;
 		width: auto;
 		display: table;
-		color:#000;
+		color:#fff;
 	}
 	
 	.over-white-section .button-wrap.menu {
@@ -2969,7 +2970,7 @@ html,body {
 	}
 	
 	.light-content .light-section .button-wrap {
-		color:#000;
+		color:#fff;
 	}
 	
 	.white-header .button-wrap {
@@ -2977,7 +2978,7 @@ html,body {
 	}
 	
 	.light-content .white-header .button-wrap {
-		color:#000;		
+		color:#fff;		
 	}
 	
 	.button-wrap:after {
@@ -3217,7 +3218,7 @@ html,body {
 	}
 	
 	.button-link .button-icon i {
-		background-color:#000;
+		background-color:#fff;
 		color:transparent;
 		font-size: 14px;		
 		border-radius:10px;
@@ -3230,7 +3231,7 @@ html,body {
 	}
 	
 	.button-link:hover .button-icon i {
-		background-color:#000;
+		background-color:#fff;
 		color:#fff;
 		transform: scale(1.2);
 		border-radius:100%;
@@ -3244,12 +3245,12 @@ html,body {
 	
 	.light-content .button-link:hover .button-icon i, .dark-section .button-link:hover .button-icon i {
 		background-color:#fff;
-		color:#000;
+		color:#fff;
 		opacity:1;
 	}
 	
 	.light-content .light-section .button-link:hover .button-icon i {
-		background-color:#000;
+		background-color:#fff;
 		color:#fff;
 		opacity:1;
 	}
@@ -3280,7 +3281,7 @@ html,body {
 		display: table;
 		width:auto;
 		padding:0;
-		color:#000;
+		color:#fff;
 	}
 	
 	.clapat-footer .link-text {
@@ -3298,7 +3299,7 @@ html,body {
 	}
 	
 	.light-content .light-section .link-text {
-		color:#000;
+		color:#fff;
 	}
 	
 	.link-text span {
@@ -3595,7 +3596,7 @@ html,body {
 	}
 	
 	.flexnav li a {
-		color:#000;
+		color:#fff;
 	}
 	
 	.invert-header .flexnav li a {
