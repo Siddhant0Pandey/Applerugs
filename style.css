@@ -2734,6 +2734,7 @@ html,body {
 		margin: 20px auto;
 		height: 80px;
 		position: absolute;
+		padding-bottom: 120px;
 		width: 100%;
 		box-sizing: border-box;
 		bottom: 0;
@@ -2742,6 +2743,7 @@ html,body {
 	
 	.footer-middle {
 		position: absolute;
+		padding-bottom: 20px;
 		margin: 0 auto;
 		width: 100%;
 		height: inherit;
