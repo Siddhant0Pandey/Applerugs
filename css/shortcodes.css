@@ -3793,6 +3793,10 @@ input[type="submit"] {
   color: #fff;
   margin: 0;
 }
+.pinned-lists li:hover a {
+  text-decoration: underline;
+  color: #fff;
+}
 
 .pinned-lists li.has-info-even::after,
 .pinned-lists li.has-info-odd::after {

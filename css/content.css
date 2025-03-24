@@ -82,7 +82,9 @@
   position: relative;
   display: block;
   width: auto;
+
   color: #fff;
+
   margin-bottom: 0;
   letter-spacing: -0.4vw;
 }
@@ -161,7 +163,9 @@
   position: relative;
   display: block;
   overflow: hidden;
+
   color: #fff;
+
   opacity: 1;
   position: absolute;
   bottom: 50px;
@@ -226,7 +230,9 @@
   height: auto;
   width: 100%;
   aspect-ratio: 15/9;
+
   background-color: #fff;
+
   display: block;
   position: relative;
   border-radius: 6px;
@@ -586,6 +592,8 @@
 }
 
 #hero-description p {
+  color: #000;
+
   color: #fff;
 }
 
@@ -691,7 +699,11 @@
   bottom: 0;
   left: 0;
   line-height: 60px;
+
+  color: #000;
+
   color: #fff;
+
   overflow: hidden;
 }
 
@@ -833,7 +845,11 @@
   height: 350px;
   width: 100%;
   bottom: -2px;
+
+  background-color: #000;
+
   background-color: #fff;
+
   z-index: 0;
   -webkit-mask-image: linear-gradient(transparent, black 75%);
   mask-image: linear-gradient(transparent, black 75%);
@@ -911,7 +927,11 @@
 #page-nav {
   height: auto;
   width: 100%;
+
+  color: #000;
+
   color: #fff;
+
   position: relative;
   margin-bottom: 0;
   opacity: 0;
@@ -964,13 +984,16 @@
 }
 
 .next-hero-title {
-  font-size: calc(1rem + 12vw);
+  font-size: calc(0.5rem + 9vw);
+
   line-height: calc(1rem + 14vw);
   font-weight: 600;
   position: relative;
   display: block;
   width: auto;
+
   color: #fff;
+
   margin-bottom: 0px;
   letter-spacing: -0.4vw;
 }
@@ -1034,7 +1057,9 @@
   position: relative;
   display: block;
   overflow: hidden;
+
   color: #fff;
+
   margin-top: 40px;
   opacity: 0.6;
 }
@@ -1233,6 +1258,7 @@
   position: relative;
   display: block;
   overflow: hidden;
+
   mask-image: linear-gradient(#fff3, black 5%, black 95%, #fff3 100%);
   -webkit-mask-image: linear-gradient(#fff3, black 5%, black 95%, #fff3 100%);
 }
@@ -1295,6 +1321,7 @@
   right: -45px;
   overflow: hidden;
   opacity: 1;
+
   color: #fff;
 }
 
@@ -1340,6 +1367,7 @@
   position: absolute;
   height: 6px;
   width: 0;
+
   background-color: #fff;
 }
 
