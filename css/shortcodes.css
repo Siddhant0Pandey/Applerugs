@@ -3394,7 +3394,7 @@ input[type="submit"] {
   transform: scale(0.7) translateY(0%);
   transform-origin: center center;
   margin: 0 auto;
-  filter: grayscale(1);
+  filter: grayscale(0);
 }
 
 .clipped-image img {
@@ -3792,6 +3792,10 @@ input[type="submit"] {
   font-weight: 600;
   color: #fff;
   margin: 0;
+}
+.pinned-lists li:hover a {
+  text-decoration: underline;
+  color: #fff;
 }
 
 .pinned-lists li.has-info-even::after,
