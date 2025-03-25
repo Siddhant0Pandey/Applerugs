@@ -692,7 +692,7 @@ html,body {
 	
 	a:hover, a:active {
 	  outline: 0;
-	  color: #7F1416;
+	  /* color: #7F1416; */
 	}
 	
 	a, .light-content .light-section a {
