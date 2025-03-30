@@ -561,7 +561,7 @@
 
 .external-titles .slide-title {
   position: absolute;
-  font-size: calc((1rem + 12vw) / 2);
+  font-size: calc((1rem + 9vw) / 2);
   line-height: calc((1rem + 20vw) / 2);
   font-weight: 600;
   letter-spacing: -0.2vw;
