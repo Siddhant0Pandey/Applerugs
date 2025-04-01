@@ -623,13 +623,11 @@
   background-color: #000;
 }
 /* Goals theme colors*/
-.clapat-slide {
-  position: relative;
-}
+
 .goal-one {
   z-index: 15;
   opacity: 0.4;
-  /* position: absolute; */
+  position: absolute;
   height: 100vh;
   width: 100vw;
   top: 0;
