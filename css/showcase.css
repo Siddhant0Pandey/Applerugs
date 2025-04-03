@@ -1660,4 +1660,7 @@
     height: 50px;
     bottom: 15px;
   }
+  snap-slider-captions {
+    line-height: 220px;
+  }
 }
