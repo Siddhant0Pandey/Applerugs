@@ -1,0 +1,117 @@
+/* Basic container for the techniques */
+.techniques-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+  }
+  
+  /* Styling for individual technique blocks */
+  .technique {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Content section */
+  .technique-content {
+    width: 50%;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  .technique-content h2 {
+    font-size: 2.2rem; /* Increased font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .technique-content p {
+    font-size: 1.1rem; /* Slightly larger font size */
+    line-height: 1.8;
+    color: white;
+  }
+  
+  .technique-content h3 {
+    margin-top: 25px;
+    font-size: 1.4rem; /* Increased font size */
+    color: white;
+  }
+  
+  /* Image section */
+  .technique-image {
+    width: 45%;
+    height: auto;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .technique-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .techniques-container {
+      padding: 30px;
+    }
+  
+    .technique {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .technique-content {
+      width: 100%;
+    }
+  
+    .technique-content h2 {
+      font-size: 1.8rem; /* Adjust for smaller screens */
+    }
+  
+    .technique-content p {
+      font-size: 1rem; /* Adjust for smaller screens */
+    }
+  
+    .technique-content h3 {
+      font-size: 1.2rem; /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .technique-content h2 {
+      font-size: 1.5rem; /* Further adjustment for mobile */
+    }
+  
+    .technique-content p {
+      font-size: 0.95rem; /* Further adjustment for mobile */
+    }
+  
+    .technique-content h3 {
+      font-size: 1.1rem; /* Further adjustment for mobile */
+    }
+  
+    .technique-image {
+      width: 100%;
+    }
+  }
+  
