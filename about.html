@@ -26,7 +26,6 @@
       ga("create", "code_here", "auto");
       ga("send", "pageview");
     </script>
-
     <title>
       AppleRugs Website - A Sustainable and Eco Friendly rug company
     </title>
@@ -47,6 +46,12 @@
       rel="stylesheet"
     />
   </head>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+
+  </style>
 
   <body
     class="hidden hidden-ball smooth-scroll rounded-borders hero-below-caption"
@@ -122,7 +127,7 @@
                         data-type="page-transition"
                         href="index.html"
                         ><div class="before-span">
-                          <span data-hover="">Home</span>
+                          <span data-hover="Home">Home</span>
                         </div></a
                       >
                     </li>
@@ -132,7 +137,7 @@
                         data-type="page-transition"
                         href="about.html"
                         ><div class="before-span">
-                          <span data-hover="Abourt Us">About Us</span>
+                          <span data-hover="About Us">About Us</span>
                         </div></a
                       >
                       <ul>
@@ -155,10 +160,8 @@
                       </li>
                         <li>
                           <a
-                            class="ajax-link"
-                            href="index-playground.html"
-                            data-type="page-transition"
-                            >Playground</a
+                             href="about.html#team"
+                            >Our Team</a
                           >
                         </li>
                       </ul>
@@ -336,7 +339,8 @@
                       <!--/Row -->
 
                       <!-- Row -->
-                      <div
+                       <div id="team">
+                        <div
                         class="content-row full row_padding_top row_padding_bottom light-section"
                         data-bgcolor="#7F1416"
                       >
@@ -451,6 +455,8 @@
                           </ul>
                         </div>
                       </div>
+                       </div>
+                      
                       <!--/Row -->
 
                       <!-- Row -->
@@ -689,5 +695,37 @@
     <script src="js/common.js"></script>
     <script src="js/contact.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      // This function checks the URL hash and scrolls to the section
+      function scrollToSection() {
+        if (window.location.hash) {
+          const target = document.querySelector(window.location.hash);
+          if (target) {
+            // Wait for AJAX content to fully load before scrolling
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500); // Adjust timeout if necessary
+          }
+        }
+      }
+    
+      // Trigger scroll when the page is fully loaded
+      window.addEventListener('load', function () {
+        scrollToSection();  // First call to check if hash exists
+      });
+    
+      // If using custom page transition events, hook into them like this:
+      document.addEventListener('ajax-transition-complete', function () {
+        scrollToSection();  // Scroll after AJAX content loads
+      });
+    
+      // Listen for hash change if URL hash changes dynamically (SPA scenario)
+      window.addEventListener('hashchange', function () {
+        scrollToSection();
+      });
+    </script>
+    
+    
+    
   </body>
 </html>
