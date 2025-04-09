@@ -39,6 +39,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
+    <!-- <link href="technique.css" rel="stylesheet" /> -->
     <link href="css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -290,9 +291,237 @@
 
                     <hr />
                     <hr class="destroy" />
-                    <p class="has-opacity">
+
+                    <!-- hand knotted technique -->
+                     <style>
+            .techniques-container {
+    width: 100vw;
+    margin-left: calc(-1 * (100vw - 100%) / 2); /* Ensures full bleed */
+    background: linear-gradient(135deg, #000, #000);
+  padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+              .technique {
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technique:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.technique-title {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.technique-main {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.technique-image {
+    flex: 1 1 400px;
+    max-width: 500px;
+    margin: auto;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.technique-image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+.technique-image img:hover {
+    transform: scale(1.05);
+}
+li{
+  color: aliceblue;
+}
+.technique-description {
+    flex: 1 1 400px;
+     color: white;
+     padding: 20px;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.technique-description p,
+.technique-description h3 {
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    text-align: left;
+
+}
+
+.technique-description h3 {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.extra-info {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: white;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.extra-info h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.extra-info ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.extra-info p {
+    font-size: 1.1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .technique-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technique-description,
+    .technique-image {
+        width: 100%;
+    }
+
+    .technique-title {
+        font-size: 2.2rem;
+    }
+
+    .technique-description h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .technique-title {
+        font-size: 1.8rem;
+    }
+
+    .technique-description p {
+        font-size: 1rem;
+    }
+
+    .extra-info h4 {
+        font-size: 1.2rem;
+    }
+}
+
+                     </style>
+
+<div class="techniques-container">
+
+  <!-- Persian Knot -->
+  <div class="technique">
+    <h2 class="technique-title">Persian Knot </h2>
+    
+    <div class="technique-main">
+      <div class="technique-image">
+        <img src="images/persianrugs.jpg" alt="Persian Knot" />
+      </div>
+      <div class="technique-description">
+        <p>
+          Originating from Persia (modern-day Iran), the Persian knot is renowned for creating intricate, luxurious carpets. This technique allows for precision in weaving detailed patterns, making it ideal for artistic designs like floral motifs and medallions.
+        </p>
+        <h3>Why It’s Unique:</h3>
+        <p>
+          The Persian knot is perfect for fine, detailed patterns and is often used in carpets with sharp borders and intricate designs. The result is a smooth, dense rug that’s long-lasting and durable.
+        </p>
+      </div>
+    </div>
+
+    <div class="extra-info">
+      <div>
+        <h4>Characteristics:</h4>
+        <ul>
+          <li><strong>Precision</strong> in design and pattern details.</li>
+          <li><strong>Fine textures</strong> with soft, smooth surfaces.</li>
+          <li>Typically used for <strong>floral</strong>, <strong>medallion</strong>, and intricate border patterns.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Durability:</h4>
+        <p>
+          Persian knot rugs are known for their longevity due to the tight weave and high-quality materials used. These rugs perform well in high-traffic areas, maintaining their structure and beauty over many years.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="technique">
+    <h2 class="technique-title">Tibetan Knot</h2>
+  
+    <div class="technique-main">
+      
+      <div class="technique-description">
+        <p>
+          Tibetan rugs are handcrafted using a traditional method passed down through generations in the Himalayan region. The Tibetan knot is known for its intricate craftsmanship and luxurious texture. Its soft, plush quality makes it perfect for creating exquisite rugs with rich, detailed patterns.
+        </p>
+        <h3>Why It’s Unique:</h3>
+        <p>
+          The Tibetan knot allows for finer detailing and more complex designs due to its unique knotting technique. It’s often used for creating detailed, symbolic motifs and vibrant color patterns. The knots are tied with handspun wool, adding to the natural beauty of the rug.
+        </p>
+      </div>
+      <div class="technique-image">
+        <img src="images/tibetanrugs.jpg" alt="Tibetan Knot" />
+      </div>
+    </div>
+  
+    <div class="extra-info">
+      <div>
+        <h4>Characteristics:</h4>
+        <ul>
+          <li><strong>Luxurious texture</strong> with a soft and plush feel.</li>
+          <li><strong>Intricate designs</strong> with vibrant colors and detailed motifs.</li>
+          <li>Ideal for <strong>artistic</strong> and <strong>symbolic</strong> patterns.</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Durability:</h4>
+        <p>
+          Tibetan knot rugs are crafted with high-quality wool, making them durable and long-lasting. Despite their soft texture, they are capable of withstanding moderate foot traffic. The rich wool fibers provide warmth and resilience, making these rugs an investment for years to come.
+        </p>
+      </div>
+    </div>
+</div>
+
+
+  <!-- Repeat similar structure for Turkish Knot -->
+</div>
+
+
+
+                    <!-- <p class="has-opacity">
                       These images are credited to the following author.
-                    </p>
+                    </p> -->
                     <br />
 
                     <div class="button-box has-animation" data-delay="100">
