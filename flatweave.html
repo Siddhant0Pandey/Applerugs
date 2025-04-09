@@ -319,10 +319,178 @@
 
                     <hr />
                     <hr class="destroy" />
-                    <p class="has-opacity">
-                      These images are credited to the following author.
-                    </p>
+                  ÷
                     <br />
+
+<!-- types of weave -->
+<div class="flat-weave-types-container">
+  <h1 class="section-title">Types of Flat Weave</h1>
+
+  <!-- Top Row -->
+  <div class="flat-weave-type top-row" id="kilim">
+    <h2>Kilim</h2>
+    <p>Kilim is a traditional flat weave rug from the Middle East, known for its geometric patterns and vibrant colors.</p>
+  </div>
+
+  <div class="flat-weave-type top-row top-row2" id="dhurrie">
+    <h2>Dhurrie</h2>
+    <p>Dhurrie is a flat woven rug from India, famous for its durability and minimalistic design.</p>
+  </div>
+
+  <!-- Bottom Row -->
+  <div class="flat-weave-type bottom-row" id="soumak">
+    <h2>Soumak</h2>
+    <p>Soumak weaving, from the Caucasus region, is known for its intricate, raised patterns and rich textures.</p>
+  </div>
+
+  <div class="flat-weave-type bottom-row bottom-row2" id="berber">
+    <h2>Berber</h2>
+    <p>Berber rugs are woven by indigenous people in North Africa, known for their minimalist, geometric designs.</p>
+  </div>
+</div>
+
+<style>
+  /* Container for the flat weave types */
+.flat-weave-types-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px;
+  padding: 50px;
+  align-items: center;
+}
+
+/* Title for the section */
+.section-title {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+
+.flat-weave-type {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: opacity 1s ease-out, transform 1s ease-out; 
+  padding: 20px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white; 
+}
+
+
+.top-row {
+  background-image: url('images/killimrugs.jpg'); 
+}
+.top-row2{
+  background-image: url('images/dhurrierugs.jpg');
+}
+
+.bottom-row {
+  background-image: url('images/soumakrugs.jpg'); 
+}
+.bottom-row2{
+  background-color: url('images/berberrugs.jpg');
+}
+
+.top-row,.top-row2,.bottom-row,.bottom-row2{
+  filter: grayscale(0.8);
+  color: aliceblue;
+
+}
+.top-row::hover{
+  filter: grayscale(0.2);
+}.top-row2:hover{
+  filter: grayscale(0.2);
+}.bottom-row:hover{
+  filter: grayscale(0.2);
+}.bottom-row2:hover{
+  filter: grayscale(0.2);
+}
+
+.flat-weave-type h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.flat-weave-type p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+
+.flat-weave-type.visible {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .flat-weave-types-container {
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 30px;
+  }
+
+  .flat-weave-type {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .flat-weave-types-container {
+    grid-template-columns: 1fr; 
+    padding: 20px;
+  }
+
+  .flat-weave-type {
+    font-size: 0.95rem; 
+  }
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+/* Apply the animation */
+.flat-weave-type {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.flat-weave-type:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.flat-weave-type:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.flat-weave-type:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.flat-weave-type:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+</style>
+
+
+<!-- end of types of weave -->
+
 
                     <div class="button-box has-animation" data-delay="100">
                       <div class="clapat-button-wrap parallax-wrap hide-ball">
@@ -334,7 +502,7 @@
                               target="_blank"
                               href="https://www.behance.net/gallery/194770379/P9250"
                             >
-                              <span data-hover="View Project"
+                              <span data-hover="View Project" style="color: #7F1416;"
                                 >View Project</span
                               >
                             </a>
