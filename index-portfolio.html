@@ -253,7 +253,7 @@
                         data-infoTextBefore="Explore"
                         data-infoTextAfter="of AppleRugs"
                       >
-                        <div><span>projects</span></div>
+                        <div><span>Projects</span></div>
                       </h1>
 
                       <div
@@ -353,288 +353,211 @@
                       </div>
 
                       <!-- ClaPat Portfolio -->
-                      <div class="showcase-portfolio expand-grid">
-                        <div class="clapat-item photo-filter">
-                          <div>
-                            <div class="img-mask pixels-cover">
-                              <div class="section-image trigger-item-link">
-                                <img
-                                  src="images/yak.jpg"
-                                  class="item-image grid__item-img"
-                                />
-                              </div>
-                              <img
-                                src="images/yak.jpg"
-                                class="grid__item-img grid__item-img--large"
-                              />
-                              <div class="section-thumb">
-                                <img src="images/yak.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div
-                              class="slide-caption trigger-item-link-secondary"
-                            ></div>
-                          </div>
-                        </div>
-
-                        <div class="clapat-item design-filter">
-                          <div class="slide-inner">
-                            <div class="img-mask pixels-cover">
-                              <div class="section-image">
-                                <img
-                                  src="images/louge.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                              </div>
-                              <img
-                                src="images/louge.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/louge.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="slide-caption"></div>
-                          </div>
-                        </div>
-
-                        <div class="clapat-item photo-filter">
-                          <div class="slide-inner">
-                            <div class="img-mask pixels-cover">
-                              <div class="section-image">
-                                <img
-                                  src="images/room1.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                              </div>
-                              <img
-                                src="images/room1.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/room1.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="slide-caption"></div>
-                          </div>
-                        </div>
-
-                        <div class="clapat-item video-filter">
+                      <div
+                        class="showcase-portfolio expand-grid"
+                        style="
+                          display: flex;
+                          flex-wrap: wrap;
+                          justify-content: center;
+                          gap: 50px;
+                          padding: 20px;
+                          box-sizing: border-box;
+                        "
+                      >
+                        <!-- CARD 1 -->
+                        <div
+                          class="clapat-item photo-filter"
+                          style="
+                            flex: 1 1 300px;
+                            max-width: 500px;
+                            box-sizing: border-box;
+                          "
+                        >
                           <div
-                            class="slide-inner trigger-item"
-                            data-centerLine="OPEN"
+                            style="
+                              background-color: transparent;
+                              width: 100%;
+                              height: 490px;
+                              perspective: 1000px;
+                            "
                           >
-                            <div class="img-mask pixels-cover">
-                              <a
-                                class="slide-link"
-                                data-type="page-transition"
-                                href="project04.html"
-                              ></a>
-                              <div class="section-image trigger-item-link">
-                                <img
-                                  src="images/04hero.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                                <div class="hero-video-wrapper">
-                                  <video loop muted class="bgvid">
-                                    <source
-                                      src="images/04hero.mp4"
-                                      type="video/mp4"
+                            <div
+                              style="
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                transition: transform 0.8s ease-in-out;
+                                transform-style: preserve-3d;
+                              "
+                              onmouseover="this.style.transform='rotateY(180deg)'"
+                              onmouseout="this.style.transform='rotateY(0deg)'"
+                            >
+                              <!-- Front Side -->
+                              <div
+                                style="
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  backface-visibility: hidden;
+                                  border-radius: 10px;
+                                  overflow: hidden;
+                                  background-color: #fff;
+                                  z-index: 2;
+                                "
+                              >
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/yak.jpg"
+                                      alt="Yak"
+                                      class="item-image grid__item-img"
+                                      style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                      "
                                     />
-                                  </video>
+                                  </div>
                                 </div>
                               </div>
-                              <img
-                                src="images/04hero.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/04hero.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div
-                              class="slide-caption trigger-item-link-secondary"
-                            >
-                              <div class="slide-title">
-                                <span>The Invincibles</span>
-                              </div>
-                              <div class="slide-date"><span>2025</span></div>
-                              <div class="slide-cat">
-                                <span>Video Production</span>
+
+                              <!-- Back Side -->
+                              <div
+                                style="
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  backface-visibility: hidden;
+                                  border-radius: 10px;
+                                  overflow: hidden;
+                                  background-color: #1e1e1e;
+                                  color: white;
+                                  transform: rotateY(180deg);
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  padding: 20px;
+                                "
+                              >
+                                <div style="text-align: center">
+                                  <h3
+                                    style="
+                                      margin-bottom: 10px;
+                                      font-size: 1.5rem;
+                                    "
+                                  >
+                                    Yak in the Himalayas
+                                  </h3>
+                                  <p style="font-size: 1rem; line-height: 1.4">
+                                    This majestic yak was photographed in the
+                                    Himalayan region of Nepal. Yaks are vital
+                                    for transportation and milk production in
+                                    high-altitude areas.
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
 
-                        <div class="clapat-item design-filter">
+                        <!-- CARD 2 -->
+                        <div
+                          class="clapat-item photo-filter"
+                          style="
+                            flex: 1 1 300px;
+                            max-width: 500px;
+                            box-sizing: border-box;
+                          "
+                        >
                           <div
-                            class="slide-inner align-top trigger-item change-header"
-                            data-centerLine="OPEN"
+                            style="
+                              background-color: transparent;
+                              width: 100%;
+                              height: 490px;
+                              perspective: 1000px;
+                            "
                           >
-                            <div class="img-mask pixels-cover">
-                              <a
-                                class="slide-link"
-                                data-type="page-transition"
-                                href="project05.html"
-                              ></a>
-                              <div class="section-image trigger-item-link">
-                                <img
-                                  src="images/05hero.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                              </div>
-                              <img
-                                src="images/05hero.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/05hero1.jpg" alt="" />
-                              </div>
-                            </div>
                             <div
-                              class="slide-caption trigger-item-link-secondary"
+                              style="
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                transition: transform 0.8s ease-in-out;
+                                transform-style: preserve-3d;
+                              "
+                              onmouseover="this.style.transform='rotateY(180deg)'"
+                              onmouseout="this.style.transform='rotateY(0deg)'"
                             >
-                              <div class="slide-title">
-                                <span>Kivira Naturals</span>
+                              <!-- Front Side -->
+                              <div
+                                style="
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  backface-visibility: hidden;
+                                  border-radius: 10px;
+                                  overflow: hidden;
+                                  background-color: #fff;
+                                  z-index: 2;
+                                "
+                              >
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/room1.jpg"
+                                      alt="Yak"
+                                      class="item-image grid__item-img"
+                                      style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                      "
+                                    />
+                                  </div>
+                                </div>
                               </div>
-                              <div class="slide-date"><span>2025</span></div>
-                              <div class="slide-cat">
-                                <span>Graphic Design</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
 
-                        <div class="clapat-item photo-filter">
-                          <div
-                            class="slide-inner trigger-item"
-                            data-centerLine="OPEN"
-                          >
-                            <div class="img-mask pixels-cover">
-                              <a
-                                class="slide-link"
-                                data-type="page-transition"
-                                href="project06.html"
-                              ></a>
-                              <div class="section-image trigger-item-link">
-                                <img
-                                  src="images/06hero.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                              </div>
-                              <img
-                                src="images/06hero.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/06hero1.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div
-                              class="slide-caption trigger-item-link-secondary"
-                            >
-                              <div class="slide-title">
-                                <span>Voxa Speaker</span>
-                              </div>
-                              <div class="slide-date"><span>2025</span></div>
-                              <div class="slide-cat">
-                                <span>Product Design</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="clapat-item design-filter">
-                          <div
-                            class="slide-inner trigger-item"
-                            data-centerLine="OPEN"
-                          >
-                            <div class="img-mask pixels-cover">
-                              <a
-                                class="slide-link"
-                                data-type="page-transition"
-                                href="project07.html"
-                              ></a>
-                              <div class="section-image trigger-item-link">
-                                <img
-                                  src="images/07hero.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                              </div>
-                              <img
-                                src="images/07hero.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/07hero1.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div
-                              class="slide-caption trigger-item-link-secondary"
-                            >
-                              <div class="slide-title">
-                                <span>Nanotech Agency</span>
-                              </div>
-                              <div class="slide-date"><span>2025</span></div>
-                              <div class="slide-cat">
-                                <span>Graphic Design</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="clapat-item vertical-parallax photo-filter">
-                          <div
-                            class="slide-inner trigger-item"
-                            data-centerLine="OPEN"
-                          >
-                            <div class="img-mask pixels-cover">
-                              <a
-                                class="slide-link"
-                                data-type="page-transition"
-                                href="project08.html"
-                              ></a>
-                              <div class="section-image trigger-item-link">
-                                <img
-                                  src="images/08hero.jpg"
-                                  class="item-image grid__item-img"
-                                  alt=""
-                                />
-                              </div>
-                              <img
-                                src="images/08hero.jpg"
-                                class="grid__item-img grid__item-img--large"
-                                alt=""
-                              />
-                              <div class="section-thumb">
-                                <img src="images/08hero.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div
-                              class="slide-caption trigger-item-link-secondary"
-                            >
-                              <div class="slide-title"><span>VX Lab</span></div>
-                              <div class="slide-date"><span>2025</span></div>
-                              <div class="slide-cat">
-                                <span>Photography</span>
+                              <!-- Back Side -->
+                              <div
+                                style="
+                                  position: absolute;
+                                  width: 100%;
+                                  height: 100%;
+                                  backface-visibility: hidden;
+                                  border-radius: 10px;
+                                  overflow: hidden;
+                                  background-color: #1e1e1e;
+                                  color: white;
+                                  transform: rotateY(180deg);
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  padding: 20px;
+                                "
+                              >
+                                <div style="text-align: center">
+                                  <h3
+                                    style="
+                                      margin-bottom: 10px;
+                                      font-size: 1.5rem;
+                                    "
+                                  >
+                                    Yak in the Himalayas
+                                  </h3>
+                                  <p style="font-size: 1rem; line-height: 1.4">
+                                    This majestic yak was photographed in the
+                                    Himalayan region of Nepal. Yaks are vital
+                                    for transportation and milk production in
+                                    high-altitude areas.
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <!-- ClaPat Portfolio -->
+
+                      <!-- close ClaPat Portfolio -->
                     </div>
                   </div>
                   <!-- Fit Thumb Screen Effects -->
