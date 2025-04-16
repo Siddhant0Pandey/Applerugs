@@ -153,14 +153,6 @@
                             >Our Process</a
                           >
                         </li>
-                          <li>
-                            <a
-                              class="ajax-link"
-                              href="about.html#team"
-                              data-type="page-transition"
-                              >Our Team</a
-                            >
-                          </li>
                         </ul>
                       </li>
                       <li class="menu-timeline link">
@@ -307,75 +299,476 @@
                         class="content-row has-clip-path full dark-section change-header-color disable-header-gradient"
                         data-bgcolor="transparent"
                       >
-                        <div class="content" style="display: flex;margin-top: 10%;max-width: 90%;margin-left: 8%;">
-                            <div class="left" style="width: 50%; height: 26vh;">
-                                <img src="./images/displacement/material_selection.png" alt="" style="height: 24vh;width: 80%;">
-                            </div>
-                            <div class="right" style="width: 50%;">
-                                <h4>Material Selection</h4>
-                                <p style="width: 90%;">Material selection is the first and most crucial step in rug making. It determines the rug’s texture, durability, and overall look, setting the tone for the entire design and craftsmanship process.</p>
-                            </div>
+                      <div class="material-selection-section">
+                        <div class="material-selection-left">
+                            <img src="./images/displacement/material_selection.png" alt="Material Selection" class="material-selection-image">
                         </div>
+                        <div class="material-selection-right">
+                            <h4>Material Selection</h4>
+                            <p>
+                                Material selection is the first and most crucial step in rug making.
+                                It determines the rug’s texture, durability, and overall look, setting the tone
+                                for the entire design and craftsmanship process.
+                            </p>
+                        </div>
+                    </div>
+                    
+                      
+                      <style>
+                        /* General container for the material selection section */
+.material-selection-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
 
-                        <div class="content" style="display: flex;margin-top: 10%;max-width: 90%; margin-left: 8%;">
-                            <div class="left" style="width: 50%;">
-                                <h4>Designing</h4>
-                                <p style="width: 90%;">Clients can provide their own designs, which our designers convert into weaving patterns using Galaicha software. Once finalized, a design graph is printed for the weaving process. You can also choose from our designs and customize the size and colors to suit your needs.</p>
-                            </div>
-                            <div class="right" style="width: 50%;">
-                              <img src="./images/displacement/material_selection.png" alt="" style="height: 23vh;width: 80%;">
-                            </div>
-                        </div>
+/* Left and right section styling */
+.material-selection-left, .material-selection-right {
+    width: 50%;
+}
 
-                        <div class="content" style="display: flex;margin-top: 10%;max-width: 90%;margin-left: 8%;">
-                            <div class="left" style="width: 50%;">
-                              <img src="./images/displacement/material_selection.png" alt="" style="height: 32vh;width: 80%;">
-                            </div>
-                            <div class="right" style="width: 50%;">
-                                <h4>Dyeing</h4>
-                                <p style="width: 90%;">We use high-quality Swiss Ciba dyes from Clariant, as well as vegetable dyes based on client preferences. Our dyeing master carefully measures and boils the dyes to achieve the perfect color match. Since color is crucial in rug making, we ensure all dyes are of top quality and properly approved. After dyeing, yarns are dried either in the shade or under the sun, depending on the color.</p>
-                            </div>
-                        </div>
+/* Image styling */
+.material-selection-image {
+    height: 32vh;
+    width: 80%;
+    object-fit: cover;
+}
 
-                        <div class="content" style="display: flex;margin-top: 10%;max-width: 90%;margin-left: 8%;">
-                            <div class="left" style="width: 50%;">
-                                <h4>Weaving</h4>
-                                <p style="width: 90%;">Once the design is ready, the carpet moves into production. Cotton warps are stretched on an iron frame to set up the loom. Guided by the printed graph and color-coded yarn balls, our weavers begin the intricate process of hand-weaving the rug, following the design step by step.</p>
-                            </div>
-                            <div class="right" style="width: 50%;">
-                              <img src="./images/displacement/material_selection.png" alt="" style="height: 25vh;width: 80%;">
-                            </div>
-                        </div>
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .material-selection-section {
+        flex-direction: column;
+        margin-left: 6%;
+        margin-top: 20%;
+    }
 
-                        <div class="content" style="display: flex;margin-top: 10%;max-width: 90%;margin-left: 8%;">
-                            <div class="left" style="width: 50%;">
-                              <img src="./images/displacement/material_selection.png" alt="" style="height: 27vh;width: 80%;">
-                            </div>
-                            <div class="right" style="width: 50%;">
-                                <h4>Washing</h4>
-                                <p style="width: 90%;">Once the rug is finished weaving, it undergoes a thorough washing process to remove any dirt, debris, or excess dye. This ensures the rug is clean and vibrant. After washing, the rug is carefully dried in the sun, allowing it to retain its shape, softness, and color, preparing it for its final inspection and delivery.</p>
-                            </div>
-                        </div>
+    .material-selection-left, .material-selection-right {
+        width: 100%;
+        text-align: center;
+    }
 
-                        <div class="content" style="display: flex;margin-top: 10%; max-width: 90%;margin-left: 8%;">
-                            <div class="left" style="width: 50%;">
-                                <h4>Finishing</h4>
-                                <p style="width: 90%;">In the finishing process, the rug undergoes detailed inspection and final touches. Any loose threads are trimmed, edges are secured, and the rug is combed for a smooth, even texture. This ensures the rug is flawless in both appearance and quality before it’s ready for delivery to the client.</p>
-                            </div>
-                            <div class="right" style="width: 50%;">
-                              <img src="./images/displacement/material_selection.png" alt="" style="height: 25vh;width: 80%;">
-                            </div>
-                        </div>
+    .material-selection-image {
+        width: 90%;
+        height: auto;
+    }
 
-                        <div class="content" style="display: flex;margin-top: 10%;max-width: 90%;margin-left: 8%;">
-                            <div class="left" style="width: 50%;">
-                              <img src="./images/displacement/material_selection.png" alt="" style="height: 25vh;width: 80%;">
-                            </div>
-                            <div class="right" style="width: 50%;">
-                                <h4>Packing and Shipping</h4>
-                                <p style="width: 90%;">Once the rug is fully finished, it is carefully packaged to ensure its protection during transit. The rug is rolled, securely wrapped, and placed in sturdy packaging. After thorough inspection, it is shipped to the client, ensuring it arrives in perfect condition and on time.</p>
-                            </div>
-                        </div>
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+                      </style>
+
+<div class="designing-section">
+  <div class="designing-left">
+      <h4>Designing</h4>
+      <p>
+          Clients can provide their own designs, which our designers convert into weaving patterns using Galaicha software.
+          Once finalized, a design graph is printed for the weaving process.
+          You can also choose from our designs and customize the size and colors to suit your needs.
+      </p>
+  </div>
+  <div class="designing-right">
+      <img src="./images/displacement/material_selection.png" alt="Designing Process" class="designing-image">
+  </div>
+</div>
+
+
+<style>
+  /* General container for the designing section */
+.designing-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left and right section styling */
+.designing-left, .designing-right {
+    width: 50%;
+}
+
+/* Image styling */
+.designing-image {
+    height: 32vh;
+    width: 80%;
+    object-fit: cover;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .designing-section {
+      flex-direction: column-reverse;
+        margin-left: 6%;
+        margin-top: 20%;
+    }
+
+    .designing-left, .designing-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .designing-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+</style>
+
+
+
+<div class="material-section">
+  <div class="material-left">
+      <img src="./images/displacement/material_selection.png" alt="" class="material-image">
+  </div>
+  <div class="material-right">
+      <h4>Dyeing</h4>
+      <p>We use high-quality Swiss Ciba dyes from Clariant, as well as vegetable dyes based on client preferences. Our dyeing master carefully measures and boils the dyes to achieve the perfect color match. Since color is crucial in rug making, we ensure all dyes are of top quality and properly approved. After dyeing, yarns are dried either in the shade or under the sun, depending on the color.</p>
+  </div>
+</div>
+
+<style>
+  /* General container for this specific section */
+.material-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Left and right section styling */
+.material-left, .material-right {
+    width: 50%;
+}
+
+/* Image styling */
+.material-image {
+    height: 32vh;
+    width: 80%;
+    object-fit: cover;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .material-section {
+        flex-direction: column;
+        margin-left: 6%;
+        margin-top: 20%;
+    }
+
+    .material-left, .material-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .material-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+</style>
+
+<div class="weaving-section">
+  <div class="weaving-left">
+      <h4>Weaving</h4>
+      <p>
+          Once the design is ready, the carpet moves into production. Cotton warps are stretched on an iron frame to set up the loom. 
+          Guided by the printed graph and color-coded yarn balls, our weavers begin the intricate process of hand-weaving the rug, 
+          following the design step by step.
+      </p>
+  </div>
+  <div class="weaving-right">
+      <img src="./images/displacement/material_selection.png" alt="Weaving Process" class="weaving-image">
+  </div>
+</div>
+<style>
+  /* General container for the weaving section */
+.weaving-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Left and right section styling */
+.weaving-left, .weaving-right {
+    width: 50%;
+}
+
+/* Image styling */
+.weaving-image {
+    height: 25vh;
+    width: 80%;
+    object-fit: cover;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .weaving-section {
+      flex-direction: column-reverse;
+      margin-left: 6%;
+      margin-top: 20%;
+    }
+
+    .weaving-left, .weaving-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .weaving-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+</style>
+
+<div class="washing-section">
+  <div class="washing-left">
+      <img src="./images/displacement/material_selection.png" alt="Washing Process" class="washing-image">
+  </div>
+  <div class="washing-right">
+      <h4>Washing</h4>
+      <p>
+          Once the rug is finished weaving, it undergoes a thorough washing process to remove any dirt, debris, or excess dye. 
+          This ensures the rug is clean and vibrant. After washing, the rug is carefully dried in the sun, allowing it to retain its shape, 
+          softness, and color, preparing it for its final inspection and delivery.
+      </p>
+  </div>
+</div>
+<style>
+  /* General container for the washing section */
+.washing-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Left and right section styling */
+.washing-left, .washing-right {
+    width: 50%;
+}
+
+/* Image styling */
+.washing-image {
+    height: 30vh;
+    width: 80%;
+    object-fit: cover;
+    gap: 40px;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .washing-section {
+        flex-direction: column;
+        margin-left: 6%;
+        margin-top: 20%;
+    }
+
+    .washing-left, .washing-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .washing-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+</style>
+
+<div class="finishing-section">
+  <div class="finishing-left">
+      <h4>Finishing</h4>
+      <p>
+          In the finishing process, the rug undergoes detailed inspection and final touches. Any loose threads are trimmed, edges are secured, and the rug is combed for a smooth, even texture. 
+          This ensures the rug is flawless in both appearance and quality before it’s ready for delivery to the client.
+      </p>
+  </div>
+  <div class="finishing-right">
+      <img src="./images/displacement/material_selection.png" alt="Finishing Process" class="finishing-image">
+  </div>
+</div>
+<style>
+  /* General container for the finishing section */
+.finishing-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Left and right section styling */
+.finishing-left, .finishing-right {
+    width: 50%;
+}
+
+/* Image styling */
+.finishing-image {
+    height: 25vh;
+    width: 80%;
+    object-fit: cover;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .finishing-section {
+        flex-direction: column-reverse;
+        margin-left: 6%;
+        margin-top: 20%;
+    }
+
+    .finishing-left, .finishing-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .finishing-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+</style>
+
+<div class="packing-shipping-section">
+  <div class="packing-shipping-left">
+      <img src="./images/displacement/material_selection.png" alt="Packing and Shipping Process" class="packing-shipping-image">
+  </div>
+  <div class="packing-shipping-right">
+      <h4>Packing and Shipping</h4>
+      <p>
+          Once the rug is fully finished, it is carefully packaged to ensure its protection during transit. The rug is rolled, securely wrapped, and placed in sturdy packaging. 
+          After thorough inspection, it is shipped to the client, ensuring it arrives in perfect condition and on time.
+      </p>
+  </div>
+</div>
+<style>
+  /* General container for the packing and shipping section */
+.packing-shipping-section {
+    display: flex;
+    margin-top: 10%;
+    max-width: 90%;
+    margin-left: 8%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Left and right section styling */
+.packing-shipping-left, .packing-shipping-right {
+    width: 50%;
+}
+
+/* Image styling */
+.packing-shipping-image {
+    height: 25vh;
+    width: 80%;
+    object-fit: cover;
+}
+
+/* Responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+    .packing-shipping-section {
+        flex-direction: column;
+        margin-left: 6%;
+        margin-top: 20%;
+    }
+
+    .packing-shipping-left, .packing-shipping-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .packing-shipping-image {
+        width: 90%;
+        height: auto;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+</style>
                       </div>
                       <!--/Row -->
 
