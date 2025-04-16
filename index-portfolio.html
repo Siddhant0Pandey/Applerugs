@@ -67,9 +67,41 @@
         z-index: 10;
         pointer-events: none; /* Let clicks pass through to card */
       }
+      .flip-card-content {
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .flip-card-content h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .flip-card-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+        overflow-y: auto;
+        max-height: calc(100% - 3rem); /* Adjust based on your h3 size */
+      }
 
       .flip-card {
         pointer-events: auto; /* Only the card gets clicks */
+      }
+      .flip-card-back {
+        background-color: #1e1e1e;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Prevent content from overflowing the card */
       }
 
       @media (max-width: 768px) {
@@ -83,6 +115,49 @@
         /* Disable template animations on mobile */
         .clapat-item {
           animation: none !important;
+        }
+        .flip-card-content {
+          font-size: 4px;
+        }
+      }
+      @media (max-width: 1200px) {
+        .flip-card-content h3 {
+          font-size: 1.8rem;
+        }
+        .flip-card-content p {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .flip-card-content h3 {
+          font-size: 1.6rem;
+        }
+        .flip-card-content p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .flip-card {
+          height: 400px;
+        }
+
+        .flip-card-content h3 {
+          font-size: 1.4rem;
+        }
+        .flip-card-content p {
+          font-size: 0.85rem;
+          padding: 0 10px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .flip-card-content h3 {
+          font-size: 1.2rem;
+        }
+        .flip-card-content p {
+          font-size: 0.8rem;
         }
       }
     </style>
@@ -483,148 +558,173 @@
                       </div>
 
                       <!-- ClaPat Portfolio -->
-                      <div class="clapat-item photo-filter">
-                        <div class="flip-card-container">
-                          <!-- Add this wrapper -->
+                      <div class="showcase-portfolio expand-grid">
+                        <!-- CARD 1 -->
+                        <div class="clapat-item photo-filter">
                           <div class="flip-card">
-                            <div class="showcase-portfolio expand-grid">
-                              <!-- CARD 1 -->
-                              <div class="clapat-item photo-filter">
-                                <div class="flip-card">
-                                  <div class="flip-card-inner">
-                                    <!-- Front Side -->
-                                    <div class="flip-card-front">
-                                      <div class="img-mask pixels-cover">
-                                        <div
-                                          class="section-image trigger-item-link"
-                                        >
-                                          <img
-                                            src="images/yak.jpg"
-                                            alt="Luxury carpet at Yak & Yati Hotel"
-                                            class="item-image grid__item-img"
-                                            loading="lazy"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <!-- Back Side -->
-                                    <div class="flip-card-back">
-                                      <div class="flip-card-content">
-                                        <h3>Hotel Yak & Yati</h3>
-                                        <p>
-                                          Applerugs is proud to have completed a
-                                          prestigious project for the renowned
-                                          Yak & Yeti Hotel in Kathmandu...
-                                        </p>
-                                      </div>
-                                    </div>
+                            <div class="flip-card-inner">
+                              <!-- Front Side -->
+                              <div class="flip-card-front">
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/yak.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
+                                      class="item-image grid__item-img"
+                                      loading="lazy"
+                                    />
                                   </div>
                                 </div>
                               </div>
+                              <!-- Back Side -->
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Yak & Yati</h3>
+                                  <p>
+                                    Applerugs is proud to have completed a
+                                    prestigious project for the renowned Yak &
+                                    Yeti Hotel in Kathmandu. For this project,
+                                    we supplied and delivered a wide range of
+                                    high-quality tufted carpets tailored to meet
+                                    the hotel’s elegant interior design
+                                    standards. With a total of 144 pieces
+                                    covering over 1400 square meters, this
+                                    collaboration highlights our ability to
+                                    execute large-scale custom flooring
+                                    solutions with precision and excellence. The
+                                    successful completion of this project
+                                    reflects our commitment to craftsmanship,
+                                    timely delivery, and exceptional client
+                                    service.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-                              <!-- CARD 2 -->
-                              <div class="clapat-item photo-filter">
-                                <div class="flip-card">
-                                  <div class="flip-card-inner">
-                                    <!-- Front Side -->
-                                    <div class="flip-card-front">
-                                      <div class="img-mask pixels-cover">
-                                        <div
-                                          class="section-image trigger-item-link"
-                                        >
-                                          <img
-                                            src="images/yak.jpg"
-                                            alt="Luxury carpet at Yak & Yati Hotel"
-                                            class="item-image grid__item-img"
-                                            loading="lazy"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <!-- Back Side -->
-                                    <div class="flip-card-back">
-                                      <div class="flip-card-content">
-                                        <h3>Hotel Yak & Yati</h3>
-                                        <p>
-                                          Applerugs is proud to have completed a
-                                          prestigious project for the renowned
-                                          Yak & Yeti Hotel in Kathmandu...
-                                        </p>
-                                      </div>
-                                    </div>
+                        <!-- CARD 2 -->
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <!-- Front Side -->
+                              <div class="flip-card-front">
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/yak1.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
+                                      class="item-image grid__item-img"
+                                      loading="lazy"
+                                    />
                                   </div>
                                 </div>
                               </div>
+                              <!-- Back Side -->
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Yak & Yati</h3>
+                                  <p>
+                                    Applerugs is proud to have completed a
+                                    prestigious project for the renowned Yak &
+                                    Yeti Hotel in Kathmandu. For this project,
+                                    we supplied and delivered a wide range of
+                                    high-quality tufted carpets tailored to meet
+                                    the hotel’s elegant interior design
+                                    standards. With a total of 144 pieces
+                                    covering over 1400 square meters, this
+                                    collaboration highlights our ability to
+                                    execute large-scale custom flooring
+                                    solutions with precision and excellence. The
+                                    successful completion of this project
+                                    reflects our commitment to craftsmanship,
+                                    timely delivery, and exceptional client
+                                    service.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-                              <!-- Card 3 -->
-                              <div class="clapat-item photo-filter">
-                                <div class="flip-card">
-                                  <div class="flip-card-inner">
-                                    <!-- Front Side -->
-                                    <div class="flip-card-front">
-                                      <div class="img-mask pixels-cover">
-                                        <div
-                                          class="section-image trigger-item-link"
-                                        >
-                                          <img
-                                            src="images/yak.jpg"
-                                            alt="Luxury carpet at Yak & Yati Hotel"
-                                            class="item-image grid__item-img"
-                                            loading="lazy"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <!-- Back Side -->
-                                    <div class="flip-card-back">
-                                      <div class="flip-card-content">
-                                        <h3>Hotel Yak & Yati</h3>
-                                        <p>
-                                          Applerugs is proud to have completed a
-                                          prestigious project for the renowned
-                                          Yak & Yeti Hotel in Kathmandu...
-                                        </p>
-                                      </div>
-                                    </div>
+                        <!-- CARD 3 -->
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <!-- Front Side -->
+                              <div class="flip-card-front">
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/pawan1.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
+                                      class="item-image grid__item-img"
+                                      loading="lazy"
+                                    />
                                   </div>
                                 </div>
                               </div>
+                              <!-- Back Side -->
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Pawan Palace</h3>
+                                  <p>
+                                    Applerugs is honored to have partnered with
+                                    the distinguished Pawan Palace for a custom
+                                    carpet supply project. This collaboration
+                                    involved the design and delivery of premium
+                                    tufted carpets, carefully crafted to
+                                    complement the luxurious ambiance of the
+                                    hotel. Our team ensured every detail met the
+                                    highest standards of quality and elegance,
+                                    from material selection to final
+                                    installation. This project stands as a
+                                    testament to our dedication to excellence,
+                                    timely execution, and our ability to bring
+                                    refined design visions to life.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-                              <!-- Card 4 -->
-                              <div class="clapat-item photo-filter">
-                                <div class="flip-card">
-                                  <div class="flip-card-inner">
-                                    <!-- Front Side -->
-                                    <div class="flip-card-front">
-                                      <div class="img-mask pixels-cover">
-                                        <div
-                                          class="section-image trigger-item-link"
-                                        >
-                                          <img
-                                            src="images/yak.jpg"
-                                            alt="Luxury carpet at Yak & Yati Hotel"
-                                            class="item-image grid__item-img"
-                                            loading="lazy"
-                                          />
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <!-- Back Side -->
-                                    <div class="flip-card-back">
-                                      <div class="flip-card-content">
-                                        <h3>Hotel Yak & Yati</h3>
-                                        <p>
-                                          Applerugs is proud to have completed a
-                                          prestigious project for the renowned
-                                          Yak & Yeti Hotel in Kathmandu...
-                                        </p>
-                                      </div>
-                                    </div>
+                        <!-- CARD 4 -->
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <!-- Front Side -->
+                              <div class="flip-card-front">
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/pawan3.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
+                                      class="item-image grid__item-img"
+                                      loading="lazy"
+                                    />
                                   </div>
+                                </div>
+                              </div>
+                              <!-- Back Side -->
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Pawan Palace</h3>
+                                  <p>
+                                    Applerugs is honored to have partnered with
+                                    the distinguished Pawan Palace for a custom
+                                    carpet supply project. This collaboration
+                                    involved the design and delivery of premium
+                                    tufted carpets, carefully crafted to
+                                    complement the luxurious ambiance of the
+                                    hotel. Our team ensured every detail met the
+                                    highest standards of quality and elegance,
+                                    from material selection to final
+                                    installation. This project stands as a
+                                    testament to our dedication to excellence,
+                                    timely execution, and our ability to bring
+                                    refined design visions to life.
+                                  </p>
                                 </div>
                               </div>
                             </div>
