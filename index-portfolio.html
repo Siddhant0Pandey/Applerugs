@@ -1,8 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      /* Replace your existing flip-card CSS with this */
+      .flip-card {
+        background-color: transparent;
+        width: 100%;
+        height: 490px;
+        perspective: 1000px;
+        -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease;
+        transform-style: preserve-3d;
+      }
+
+      /* Added flipped class for manual control */
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden; /* Safari fix */
+      }
+
+      .flip-card-front {
+        background-color: #fff;
+      }
+
+      .flip-card-back {
+        background-color: #1e1e1e;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .flip-card {
+        touch-action: manipulation; /* Prevent double-tap zoom */
+      }
+      /* Add this to your styles */
+      .flip-card {
+        position: relative;
+        z-index: 10; /* Ensure cards stay above other elements */
+        pointer-events: auto !important; /* Override any template styles */
+      }
+
+      /* Disable template's click handling on cards */
+      .flip-card,
+      .flip-card * {
+        cursor: pointer !important;
+      }
+      .flip-card-container {
+        position: relative;
+        z-index: 10;
+        pointer-events: none; /* Let clicks pass through to card */
+      }
+
+      .flip-card {
+        pointer-events: auto; /* Only the card gets clicks */
+      }
+
+      @media (max-width: 768px) {
+        .flip-card {
+          height: 400px;
+          /* Add these to prevent template interference */
+          transform: none !important;
+          transition: none !important;
+        }
+
+        /* Disable template animations on mobile */
+        .clapat-item {
+          animation: none !important;
+        }
+      }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const flipCards = document.querySelectorAll(".flip-card");
+
+        flipCards.forEach((card) => {
+          // Stop event propagation to prevent AJAX navigation
+          card.addEventListener(
+            "click",
+            function (e) {
+              e.stopPropagation();
+              e.preventDefault();
+              this.classList.toggle("flipped");
+            },
+            true
+          ); // Use capture phase
+
+          // For desktop hover
+          if (window.innerWidth > 768) {
+            card.addEventListener("mouseenter", function () {
+              this.classList.add("flipped");
+            });
+
+            card.addEventListener("mouseleave", function () {
+              this.classList.remove("flipped");
+            });
+          }
+        });
+
+        // Prevent Clapat's AJAX handling for flip cards
+        $(document).on("click", ".flip-card", function (e) {
+          e.stopImmediatePropagation();
+          return false;
+        });
+      });
+
       (function (i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r;
         (i[r] =
@@ -36,6 +155,10 @@
       content="Download the best Creative Portfolio HTML Template in 2025"
     />
     <meta name="author" content="ClaPat Studio" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
@@ -353,203 +476,148 @@
                       </div>
 
                       <!-- ClaPat Portfolio -->
-                      <div
-                        class="showcase-portfolio expand-grid"
-                        style="
-                          display: flex;
-                          flex-wrap: wrap;
-                          justify-content: center;
-                          gap: 50px;
-                          padding: 20px;
-                          box-sizing: border-box;
-                        "
-                      >
-                        <!-- CARD 1 -->
-                        <div
-                          class="clapat-item photo-filter"
-                          style="
-                            flex: 1 1 300px;
-                            max-width: 500px;
-                            box-sizing: border-box;
-                          "
-                        >
-                          <div
-                            style="
-                              background-color: transparent;
-                              width: 100%;
-                              height: 490px;
-                              perspective: 1000px;
-                            "
-                          >
-                            <div
-                              style="
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                transition: transform 0.8s ease-in-out;
-                                transform-style: preserve-3d;
-                              "
-                              onmouseover="this.style.transform='rotateY(180deg)'"
-                              onmouseout="this.style.transform='rotateY(0deg)'"
-                            >
-                              <!-- Front Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #fff;
-                                  z-index: 2;
-                                "
-                              >
-                                <div class="img-mask pixels-cover">
-                                  <div class="section-image trigger-item-link">
-                                    <img
-                                      src="images/yak.jpg"
-                                      alt="Yak"
-                                      class="item-image grid__item-img"
-                                      style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                      "
-                                    />
+                      <div class="clapat-item photo-filter">
+                        <div class="flip-card-container">
+                          <!-- Add this wrapper -->
+                          <div class="flip-card">
+                            <div class="showcase-portfolio expand-grid">
+                              <!-- CARD 1 -->
+                              <div class="clapat-item photo-filter">
+                                <div class="flip-card">
+                                  <div class="flip-card-inner">
+                                    <!-- Front Side -->
+                                    <div class="flip-card-front">
+                                      <div class="img-mask pixels-cover">
+                                        <div
+                                          class="section-image trigger-item-link"
+                                        >
+                                          <img
+                                            src="images/yak.jpg"
+                                            alt="Luxury carpet at Yak & Yati Hotel"
+                                            class="item-image grid__item-img"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Back Side -->
+                                    <div class="flip-card-back">
+                                      <div class="flip-card-content">
+                                        <h3>Hotel Yak & Yati</h3>
+                                        <p>
+                                          Applerugs is proud to have completed a
+                                          prestigious project for the renowned
+                                          Yak & Yeti Hotel in Kathmandu...
+                                        </p>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
 
-                              <!-- Back Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #1e1e1e;
-                                  color: white;
-                                  transform: rotateY(180deg);
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  padding: 20px;
-                                "
-                              >
-                                <div style="text-align: center">
-                                  <h3
-                                    style="
-                                      margin-bottom: 10px;
-                                      font-size: 1.5rem;
-                                    "
-                                  >
-                                    Yak in the Himalayas
-                                  </h3>
-                                  <p style="font-size: 1rem; line-height: 1.4">
-                                    This majestic yak was photographed in the
-                                    Himalayan region of Nepal. Yaks are vital
-                                    for transportation and milk production in
-                                    high-altitude areas.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                              <!-- CARD 2 -->
+                              <div class="clapat-item photo-filter">
+                                <div class="flip-card">
+                                  <div class="flip-card-inner">
+                                    <!-- Front Side -->
+                                    <div class="flip-card-front">
+                                      <div class="img-mask pixels-cover">
+                                        <div
+                                          class="section-image trigger-item-link"
+                                        >
+                                          <img
+                                            src="images/yak.jpg"
+                                            alt="Luxury carpet at Yak & Yati Hotel"
+                                            class="item-image grid__item-img"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
 
-                        <!-- CARD 2 -->
-                        <div
-                          class="clapat-item photo-filter"
-                          style="
-                            flex: 1 1 300px;
-                            max-width: 500px;
-                            box-sizing: border-box;
-                          "
-                        >
-                          <div
-                            style="
-                              background-color: transparent;
-                              width: 100%;
-                              height: 490px;
-                              perspective: 1000px;
-                            "
-                          >
-                            <div
-                              style="
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                transition: transform 0.8s ease-in-out;
-                                transform-style: preserve-3d;
-                              "
-                              onmouseover="this.style.transform='rotateY(180deg)'"
-                              onmouseout="this.style.transform='rotateY(0deg)'"
-                            >
-                              <!-- Front Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #fff;
-                                  z-index: 2;
-                                "
-                              >
-                                <div class="img-mask pixels-cover">
-                                  <div class="section-image trigger-item-link">
-                                    <img
-                                      src="images/room1.jpg"
-                                      alt="Yak"
-                                      class="item-image grid__item-img"
-                                      style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                      "
-                                    />
+                                    <!-- Back Side -->
+                                    <div class="flip-card-back">
+                                      <div class="flip-card-content">
+                                        <h3>Hotel Yak & Yati</h3>
+                                        <p>
+                                          Applerugs is proud to have completed a
+                                          prestigious project for the renowned
+                                          Yak & Yeti Hotel in Kathmandu...
+                                        </p>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
 
-                              <!-- Back Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #1e1e1e;
-                                  color: white;
-                                  transform: rotateY(180deg);
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  padding: 20px;
-                                "
-                              >
-                                <div style="text-align: center">
-                                  <h3
-                                    style="
-                                      margin-bottom: 10px;
-                                      font-size: 1.5rem;
-                                    "
-                                  >
-                                    Yak in the Himalayas
-                                  </h3>
-                                  <p style="font-size: 1rem; line-height: 1.4">
-                                    This majestic yak was photographed in the
-                                    Himalayan region of Nepal. Yaks are vital
-                                    for transportation and milk production in
-                                    high-altitude areas.
-                                  </p>
+                              <!-- Card 3 -->
+                              <div class="clapat-item photo-filter">
+                                <div class="flip-card">
+                                  <div class="flip-card-inner">
+                                    <!-- Front Side -->
+                                    <div class="flip-card-front">
+                                      <div class="img-mask pixels-cover">
+                                        <div
+                                          class="section-image trigger-item-link"
+                                        >
+                                          <img
+                                            src="images/yak.jpg"
+                                            alt="Luxury carpet at Yak & Yati Hotel"
+                                            class="item-image grid__item-img"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Back Side -->
+                                    <div class="flip-card-back">
+                                      <div class="flip-card-content">
+                                        <h3>Hotel Yak & Yati</h3>
+                                        <p>
+                                          Applerugs is proud to have completed a
+                                          prestigious project for the renowned
+                                          Yak & Yeti Hotel in Kathmandu...
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- Card 4 -->
+                              <div class="clapat-item photo-filter">
+                                <div class="flip-card">
+                                  <div class="flip-card-inner">
+                                    <!-- Front Side -->
+                                    <div class="flip-card-front">
+                                      <div class="img-mask pixels-cover">
+                                        <div
+                                          class="section-image trigger-item-link"
+                                        >
+                                          <img
+                                            src="images/yak.jpg"
+                                            alt="Luxury carpet at Yak & Yati Hotel"
+                                            class="item-image grid__item-img"
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Back Side -->
+                                    <div class="flip-card-back">
+                                      <div class="flip-card-content">
+                                        <h3>Hotel Yak & Yati</h3>
+                                        <p>
+                                          Applerugs is proud to have completed a
+                                          prestigious project for the renowned
+                                          Yak & Yeti Hotel in Kathmandu...
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
