@@ -2192,13 +2192,13 @@
         label: "Tweet",
         logo: "fa-brands fa-twitter",
         shareUrl:
-          "https://twitter.com/share?url={url}&text={text}&via={via}&hashtags={hashtags}",
+          "https://x.com/codesala404/",
         countUrl: "",
       },
       facebook: {
         label: "Like",
         logo: "fa-brands fa-facebook-f",
-        shareUrl: "https://facebook.com/sharer/sharer.php?u={url}",
+        shareUrl: "https://www.instagram.com/codesala404/",
         countUrl: "https://graph.facebook.com/?id={url}",
         getCount: function (a) {
           return (a.share && a.share.share_count) || 0;
@@ -2223,7 +2223,7 @@
       linkedin: {
         label: "Share",
         logo: "fa-brands fa-linkedin",
-        shareUrl: "https://www.linkedin.com/shareArticle?mini=true&url={url}",
+        shareUrl: "https://www.linkedin.com/company/codesala404/",
         countUrl:
           "https://www.linkedin.com/countserv/count/share?format=jsonp&url={url}&callback=?",
         getCount: function (a) {
@@ -2287,7 +2287,7 @@
       messenger: {
         label: "Share",
         logo: "fa-brands fa-commenting",
-        shareUrl: "fb-messenger://share?link={url}",
+        shareUrl: "https://www.instagram.com/codesala404/",
         countUrl: "",
         shareIn: "self",
       },
