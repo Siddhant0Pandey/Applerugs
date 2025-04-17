@@ -33,7 +33,7 @@
       name="description"
       content="AppleRugs a sustainable and eco friendly rug Company"
     />
-    <meta name="author" content="ClaPat Studio" />
+    <meta name="author" content="AppleRugs" />
     <meta
       property="og:image"
       content="http://AppleRugs.clapat.com/prez/01_preview.png"
@@ -105,12 +105,12 @@
                   <img
                     class="black-logo"
                     src="images/logo.png"
-                    alt="ClaPat Logo"
+                    alt="AppleRugs Logo"
                   />
                   <img
                     class="white-logo"
                     src="images/logo-white.png"
-                    alt="ClaPat Logo"
+                    alt="AppleRugs Logo"
                   />
                 </a>
               </div>
@@ -638,7 +638,7 @@
                                 <a
                                   class="ajax-link"
                                   data-type="page-transition"
-                                  href="multimedia.html"
+                                  href="index-portfolio.html"
                                 >
                                   <span data-hover="All Projects"
                                     >All Projects</span>
@@ -686,7 +686,31 @@
 .pinned-lists-wrapper {
   position: relative;
 }
+@media (max-width: 768px) {
+  .pinned-lists-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
 
+  .pinned-lists-wrapper p {
+    font-size: 1.2rem;
+  }
+
+  .pinned-lists {
+    width: 100%;
+  }
+
+  .pinned-lists li a {
+    font-size: 1rem;
+  }
+
+  #hover-image-container img {
+    display: none
+  }
+}
 </style>   
 
 <script>
@@ -795,7 +819,7 @@ links.forEach(link => {
                           class="next-ajax-link-page"
                           data-type="page-transition"
                           data-centerline="GO TO"
-                          href="multimedia.html"
+                          href="about.html"
                         >
                           <div
                             class="next-hero-title caption-timeline"
@@ -818,7 +842,7 @@ links.forEach(link => {
             <!-- Footer -->
             <footer class="clapat-footer hidden">
               <div id="footer-container">
-                <div id="backtotop" class="button-wrap left">
+                <!-- <div id="backtotop" class="button-wrap left">
                   <div class="icon-wrap parallax-wrap">
                     <div class="button-icon parallax-element">
                       <i class="fa-solid fa-angle-up"></i>
@@ -827,7 +851,7 @@ links.forEach(link => {
                   <div class="button-text sticky left">
                     <span data-hover="Back Top">Back Top</span>
                   </div>
-                </div>
+                </div> -->
 
                 <div class="footer-middle">
                   <div class="copyright">
@@ -867,12 +891,12 @@ links.forEach(link => {
                         ></span
                       >
                     </li>
-                   
+
                     <li>
                       <span class="parallax-wrap"
                         ><a
                           class="parallax-element"
-                          href="https://www.facebook.com/clapat.ro"
+                          href="https://www.facebook.com/applerugsofficial"
                           target="_blank"
                           >Fb</a
                         ></span

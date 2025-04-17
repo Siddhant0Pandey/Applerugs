@@ -1,8 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      /* Replace your existing flip-card CSS with this */
+      .flip-card {
+        background-color: transparent;
+        width: 100%;
+        height: 490px;
+        perspective: 1000px;
+        -webkit-tap-highlight-color: transparent; /* Remove mobile tap highlight */
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease;
+        transform-style: preserve-3d;
+      }
+
+      /* Added flipped class for manual control */
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        -webkit-backface-visibility: hidden; /* Safari fix */
+      }
+
+      .flip-card-front {
+        background-color: #fff;
+      }
+
+      .flip-card-back {
+        background-color: #1e1e1e;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .flip-card {
+        touch-action: manipulation; /* Prevent double-tap zoom */
+      }
+      /* Add this to your styles */
+      .flip-card {
+        position: relative;
+        z-index: 10; /* Ensure cards stay above other elements */
+        pointer-events: auto !important; /* Override any template styles */
+      }
+
+      /* Disable template's click handling on cards */
+      .flip-card,
+      .flip-card * {
+        cursor: pointer !important;
+      }
+      .flip-card-container {
+        position: relative;
+        z-index: 10;
+        pointer-events: none; /* Let clicks pass through to card */
+      }
+      .flip-card-content {
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .flip-card-content h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .flip-card-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
+        overflow-y: auto;
+        max-height: calc(100% - 3rem); /* Adjust based on your h3 size */
+      }
+
+      .flip-card {
+        pointer-events: auto; /* Only the card gets clicks */
+      }
+      .flip-card-back {
+        background-color: #1e1e1e;
+        color: white;
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Prevent content from overflowing the card */
+      }
+
+      @media (max-width: 768px) {
+        .flip-card {
+          height: 400px;
+          /* Add these to prevent template interference */
+          transform: none !important;
+          transition: none !important;
+        }
+
+        /* Disable template animations on mobile */
+        .clapat-item {
+          animation: none !important;
+        }
+        .flip-card-content {
+          font-size: 4px;
+        }
+      }
+      @media (max-width: 1200px) {
+        .flip-card-content h3 {
+          font-size: 1.8rem;
+        }
+        .flip-card-content p {
+          font-size: 0.95rem;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .flip-card-content h3 {
+          font-size: 1.6rem;
+        }
+        .flip-card-content p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .flip-card {
+          height: 400px;
+        }
+
+        .flip-card-content h3 {
+          font-size: 1.4rem;
+        }
+        .flip-card-content p {
+          font-size: 0.85rem;
+          padding: 0 10px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .flip-card-content h3 {
+          font-size: 1.2rem;
+        }
+        .flip-card-content p {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const flipCards = document.querySelectorAll(".flip-card");
+
+        flipCards.forEach((card) => {
+          // Stop event propagation to prevent AJAX navigation
+          card.addEventListener(
+            "click",
+            function (e) {
+              e.stopPropagation();
+              e.preventDefault();
+              this.classList.toggle("flipped");
+            },
+            true
+          ); // Use capture phase
+
+          // For desktop hover
+          if (window.innerWidth > 768) {
+            card.addEventListener("mouseenter", function () {
+              this.classList.add("flipped");
+            });
+
+            card.addEventListener("mouseleave", function () {
+              this.classList.remove("flipped");
+            });
+          }
+        });
+
+        // Prevent Clapat's AJAX handling for flip cards
+        $(document).on("click", ".flip-card", function (e) {
+          e.stopImmediatePropagation();
+          return false;
+        });
+      });
+
       (function (i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r;
         (i[r] =
@@ -33,9 +227,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Download the best Creative Portfolio HTML Template in 2025"
+      content="A sustainable and eco-friendly rugs"
     />
-    <meta name="author" content="ClaPat Studio" />
+    <meta name="author" content="AppleRugs" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
@@ -101,12 +299,12 @@
                   <img
                     class="black-logo"
                     src="images/logo.png"
-                    alt="ClaPat Logo"
+                    alt="AppleRugs Logo"
                   />
                   <img
                     class="white-logo"
                     src="images/logo-white.png"
-                    alt="ClaPat Logo"
+                    alt="AppleRugs Logo"
                   />
                 </a>
               </div>
@@ -145,14 +343,14 @@
                           >
                         </li>
 
-                      <li>
-                        <a
-                          class="ajax-link"
-                          href="aboutProcess.html"
-                          data-type="page-transition"
-                          >Our Process</a
-                        >
-                      </li>
+                        <li>
+                          <a
+                            class="ajax-link"
+                            href="aboutProcess.html"
+                            data-type="page-transition"
+                            >Our Process</a
+                          >
+                        </li>
                       </ul>
                     </li>
                     <li class="menu-timeline link">
@@ -353,106 +551,44 @@
                       </div>
 
                       <!-- ClaPat Portfolio -->
-                      <div
-                        class="showcase-portfolio expand-grid"
-                        style="
-                          display: flex;
-                          flex-wrap: wrap;
-                          justify-content: center;
-                          gap: 50px;
-                          padding: 20px;
-                          box-sizing: border-box;
-                        "
-                      >
+                      <div class="showcase-portfolio expand-grid">
                         <!-- CARD 1 -->
-                        <div
-                          class="clapat-item photo-filter"
-                          style="
-                            flex: 1 1 300px;
-                            max-width: 500px;
-                            box-sizing: border-box;
-                          "
-                        >
-                          <div
-                            style="
-                              background-color: transparent;
-                              width: 100%;
-                              height: 490px;
-                              perspective: 1000px;
-                            "
-                          >
-                            <div
-                              style="
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                transition: transform 0.8s ease-in-out;
-                                transform-style: preserve-3d;
-                              "
-                              onmouseover="this.style.transform='rotateY(180deg)'"
-                              onmouseout="this.style.transform='rotateY(0deg)'"
-                            >
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
                               <!-- Front Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #fff;
-                                  z-index: 2;
-                                "
-                              >
+                              <div class="flip-card-front">
                                 <div class="img-mask pixels-cover">
                                   <div class="section-image trigger-item-link">
                                     <img
                                       src="images/yak.jpg"
-                                      alt="Yak"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
                                       class="item-image grid__item-img"
-                                      style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                      "
+                                      loading="lazy"
                                     />
                                   </div>
                                 </div>
                               </div>
-
                               <!-- Back Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #1e1e1e;
-                                  color: white;
-                                  transform: rotateY(180deg);
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  padding: 20px;
-                                "
-                              >
-                                <div style="text-align: center">
-                                  <h3
-                                    style="
-                                      margin-bottom: 10px;
-                                      font-size: 1.5rem;
-                                    "
-                                  >
-                                    Yak in the Himalayas
-                                  </h3>
-                                  <p style="font-size: 1rem; line-height: 1.4">
-                                    This majestic yak was photographed in the
-                                    Himalayan region of Nepal. Yaks are vital
-                                    for transportation and milk production in
-                                    high-altitude areas.
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Yak & Yati</h3>
+                                  <p>
+                                    Applerugs is proud to have completed a
+                                    prestigious project for the renowned Yak &
+                                    Yeti Hotel in Kathmandu. For this project,
+                                    we supplied and delivered a wide range of
+                                    high-quality tufted carpets tailored to meet
+                                    the hotel’s elegant interior design
+                                    standards. With a total of 144 pieces
+                                    covering over 1400 square meters, this
+                                    collaboration highlights our ability to
+                                    execute large-scale custom flooring
+                                    solutions with precision and excellence. The
+                                    successful completion of this project
+                                    reflects our commitment to craftsmanship,
+                                    timely delivery, and exceptional client
+                                    service.
                                   </p>
                                 </div>
                               </div>
@@ -461,94 +597,126 @@
                         </div>
 
                         <!-- CARD 2 -->
-                        <div
-                          class="clapat-item photo-filter"
-                          style="
-                            flex: 1 1 300px;
-                            max-width: 500px;
-                            box-sizing: border-box;
-                          "
-                        >
-                          <div
-                            style="
-                              background-color: transparent;
-                              width: 100%;
-                              height: 490px;
-                              perspective: 1000px;
-                            "
-                          >
-                            <div
-                              style="
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                transition: transform 0.8s ease-in-out;
-                                transform-style: preserve-3d;
-                              "
-                              onmouseover="this.style.transform='rotateY(180deg)'"
-                              onmouseout="this.style.transform='rotateY(0deg)'"
-                            >
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
                               <!-- Front Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #fff;
-                                  z-index: 2;
-                                "
-                              >
+                              <div class="flip-card-front">
                                 <div class="img-mask pixels-cover">
                                   <div class="section-image trigger-item-link">
                                     <img
-                                      src="images/room1.jpg"
-                                      alt="Yak"
+                                      src="images/yak1.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
                                       class="item-image grid__item-img"
-                                      style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                      "
+                                      loading="lazy"
                                     />
                                   </div>
                                 </div>
                               </div>
-
                               <!-- Back Side -->
-                              <div
-                                style="
-                                  position: absolute;
-                                  width: 100%;
-                                  height: 100%;
-                                  backface-visibility: hidden;
-                                  border-radius: 10px;
-                                  overflow: hidden;
-                                  background-color: #1e1e1e;
-                                  color: white;
-                                  transform: rotateY(180deg);
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  padding: 20px;
-                                "
-                              >
-                                <div style="text-align: center">
-                                  <h3
-                                    style="
-                                      margin-bottom: 10px;
-                                      font-size: 1.5rem;
-                                    "
-                                  >
-                                    Yak in the Himalayas
-                                  </h3>
-                                  <p style="font-size: 1rem; line-height: 1.4">
-                                    This majestic yak was photographed in the
-                                    Himalayan region of Nepal. Yaks are vital
-                                    for transportation and milk production in
-                                    high-altitude areas.
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Yak & Yati</h3>
+                                  <p>
+                                    Applerugs is proud to have completed a
+                                    prestigious project for the renowned Yak &
+                                    Yeti Hotel in Kathmandu. For this project,
+                                    we supplied and delivered a wide range of
+                                    high-quality tufted carpets tailored to meet
+                                    the hotel’s elegant interior design
+                                    standards. With a total of 144 pieces
+                                    covering over 1400 square meters, this
+                                    collaboration highlights our ability to
+                                    execute large-scale custom flooring
+                                    solutions with precision and excellence. The
+                                    successful completion of this project
+                                    reflects our commitment to craftsmanship,
+                                    timely delivery, and exceptional client
+                                    service.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- CARD 3 -->
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <!-- Front Side -->
+                              <div class="flip-card-front">
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/pawan1.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
+                                      class="item-image grid__item-img"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Back Side -->
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Pawan Palace</h3>
+                                  <p>
+                                    Applerugs is honored to have partnered with
+                                    the distinguished Pawan Palace for a custom
+                                    carpet supply project. This collaboration
+                                    involved the design and delivery of premium
+                                    tufted carpets, carefully crafted to
+                                    complement the luxurious ambiance of the
+                                    hotel. Our team ensured every detail met the
+                                    highest standards of quality and elegance,
+                                    from material selection to final
+                                    installation. This project stands as a
+                                    testament to our dedication to excellence,
+                                    timely execution, and our ability to bring
+                                    refined design visions to life.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- CARD 4 -->
+                        <div class="clapat-item photo-filter">
+                          <div class="flip-card">
+                            <div class="flip-card-inner">
+                              <!-- Front Side -->
+                              <div class="flip-card-front">
+                                <div class="img-mask pixels-cover">
+                                  <div class="section-image trigger-item-link">
+                                    <img
+                                      src="images/pawan3.jpg"
+                                      alt="Luxury carpet at Yak & Yati Hotel"
+                                      class="item-image grid__item-img"
+                                      loading="lazy"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Back Side -->
+                              <div class="flip-card-back">
+                                <div class="flip-card-content">
+                                  <h3>Hotel Pawan Palace</h3>
+                                  <p>
+                                    Applerugs is honored to have partnered with
+                                    the distinguished Pawan Palace for a custom
+                                    carpet supply project. This collaboration
+                                    involved the design and delivery of premium
+                                    tufted carpets, carefully crafted to
+                                    complement the luxurious ambiance of the
+                                    hotel. Our team ensured every detail met the
+                                    highest standards of quality and elegance,
+                                    from material selection to final
+                                    installation. This project stands as a
+                                    testament to our dedication to excellence,
+                                    timely execution, and our ability to bring
+                                    refined design visions to life.
                                   </p>
                                 </div>
                               </div>
@@ -611,13 +779,16 @@
 
                 <div class="footer-middle">
                   <div class="copyright">
+
                     2025 ©
                     <a
                       class="link"
                       target="_blank"
-                      href="https://www.clapat.com/"
+                      href="https://www.codesala.com/"
                       >ClaPat</a
-                    >. All rights reserved.
+                    >
+                    2025 ©AppleRugs . All rights reserved.
+
                   </div>
                 </div>
 
@@ -631,9 +802,9 @@
                       <span class="parallax-wrap"
                         ><a
                           class="parallax-element"
-                          href="https://www.dribbble.com/clapat"
+                          href="https://www.linkedin.com/company/codesala404/"
                           target="_blank"
-                          >Db</a
+                          >Ln</a
                         ></span
                       >
                     </li>
@@ -641,27 +812,18 @@
                       <span class="parallax-wrap"
                         ><a
                           class="parallax-element"
-                          href="https://www.twitter.com/clapatdesign"
+                          href="https://x.com/codesala404/"
                           target="_blank"
                           >Tx</a
                         ></span
                       >
                     </li>
+
                     <li>
                       <span class="parallax-wrap"
                         ><a
                           class="parallax-element"
-                          href="https://www.behance.com/clapat"
-                          target="_blank"
-                          >Be</a
-                        ></span
-                      >
-                    </li>
-                    <li>
-                      <span class="parallax-wrap"
-                        ><a
-                          class="parallax-element"
-                          href="https://www.facebook.com/clapat.ro"
+                          href="https://www.facebook.com/applerugsofficial"
                           target="_blank"
                           >Fb</a
                         ></span
@@ -671,7 +833,7 @@
                       <span class="parallax-wrap"
                         ><a
                           class="parallax-element"
-                          href="https://www.instagram.com/clapat.themes/"
+                          href="https://www.instagram.com/codesala404/"
                           >In</a
                         ></span
                       >
