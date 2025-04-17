@@ -458,133 +458,87 @@
   class="content-row has-clip-path row_padding_top row_padding_bottom dark-section change-header-color disable-header-gradient"
   data-bgcolor="#0c0c0c"
 >
-  <div class="pinned-lists-wrapper font-mode">
-    <p class="section-title">Weaving Your Vision: Explore Our Rug Techniques</p>
-    <ul class="pinned-lists">
-      <li><a href="handknotted.html" data-image="images/handknotted.jpg">Hand-Knotted</a></li>
-      <li><a href="flatweave.html" data-image="images/flatwave.jpg">Flat Weave</a></li>
-      <li><a href="handloom.html" data-image="images/handloom.jpg">Handloom</a></li>
-      <li><a href="handtuffed.html" data-image="images/handtufted.jpg">Hand-Tufted</a></li>
-    </ul>
-    <div id="hover-image-container">
-      <img id="hover-image" src="" alt="Hover Image" />
-    </div>
+<div class="pinned-lists-wrapper font-mode" data-duration ="3x">
+  <p>Weaving Your Vision: Explore Our Rug Techniques</p> 
+  <ul class="pinned-lists">
+    <li><a href="handknotted.html" data-image="images/handknotted.jpg">Hand-Knotted</a></li>
+    <li><a href="flatweave.html" data-image="images/flatwave.jpg">Flat Weave</a></li>
+    <li><a href="handloom.html" data-image="images/handloom.jpg">Handloom</a></li>
+    <li><a href="handtuffed.html" data-image="images/handtufted.jpg">Hand-Tufted</a></li>
+  </ul>
+  <div id="hover-image-container">
+    <img id="hover-image" src="" alt="Hover Image">
   </div>
+</div>
 </div>
 
 <style>
+  #hover-image-container {
+  display: none;
+  position: absolute;
+  top: 30px; 
+  left: 0;  
+  transform: translateX(-50%);
+}
+
+#hover-image-container img {
+  max-width: 300px;
+  max-height: 200px;
+}
+
+.pinned-lists-wrapper {
+  position: relative;
+}
+@media (max-width: 768px) {
   .pinned-lists-wrapper {
-    position: relative;
-    padding: 2rem 1rem;
-    max-width: 1200px;
-    margin: auto;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 1rem;
+    padding: 1rem;
   }
 
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+  .pinned-lists-wrapper p {
+    font-size: 1.2rem;
   }
 
   .pinned-lists {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .pinned-lists li {
     width: 100%;
-    max-width: 300px;
   }
 
-  .pinned-lists a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-
-  .pinned-lists a:hover {
-    background-color: #222;
-  }
-
-  #hover-image-container {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    padding-left: 1rem;
-    z-index: 999;
+  .pinned-lists li a {
+    font-size: 1rem;
   }
 
   #hover-image-container img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    display: none
   }
-
-  @media screen and (max-width: 768px) {
-    .section-title {
-      font-size: 1.3rem;
-    }
-
-    .pinned-lists a {
-      font-size: 1rem;
-    }
-
-    #hover-image-container {
-      display: none !important;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .section-title {
-      font-size: 1.1rem;
-    }
-
-    .pinned-lists a {
-      font-size: 0.95rem;
-    }
-  }
-</style>
+}
+</style>   
 
 <script>
   const links = document.querySelectorAll('.pinned-lists a');
-  const hoverImageContainer = document.getElementById('hover-image-container');
-  const hoverImage = document.getElementById('hover-image');
-
-  function isTouchDevice() {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  }
-
-  if (!isTouchDevice()) {
-    links.forEach(link => {
-      link.addEventListener('mouseenter', function () {
-        const imageUrl = link.getAttribute('data-image');
-        hoverImage.src = imageUrl;
-        hoverImageContainer.style.display = 'block';
-
-        const linkRect = link.getBoundingClientRect();
-        hoverImageContainer.style.left = `${linkRect.right + 10}px`;
-        hoverImageContainer.style.top = `${window.scrollY + linkRect.top}px`;
-      });
-
-      link.addEventListener('mouseleave', function () {
-        hoverImageContainer.style.display = 'none';
-      });
-    });
-  }
-</script>
+ const hoverImageContainer = document.getElementById('hover-image-container');
+ const hoverImage = document.getElementById('hover-image');
+ 
+ links.forEach(link => {
+   link.addEventListener('mouseenter', function() {
+     const imageUrl = link.getAttribute('data-image'); 
+     hoverImage.src = imageUrl; 
+     hoverImageContainer.style.display = 'block';  
+     
+     const linkRect = link.getBoundingClientRect();
+  
+     hoverImageContainer.style.left = `${linkRect.left + linkRect.width + 10}px`;  
+     hoverImageContainer.style.top = `${linkRect.top/2}px`; 
+   });
+ 
+   link.addEventListener('mouseleave', function() {
+     hoverImageContainer.style.display = 'none';  
+   });
+ });
+ 
+ </script>
   
                       <!--/Row -->
 
