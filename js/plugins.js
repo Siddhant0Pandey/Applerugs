@@ -2198,7 +2198,7 @@
       facebook: {
         label: "Like",
         logo: "fa-brands fa-facebook-f",
-        shareUrl: "https://www.instagram.com/codesala404/",
+        shareUrl: "https://www.facebook.com/applerugsofficial",
         countUrl: "https://graph.facebook.com/?id={url}",
         getCount: function (a) {
           return (a.share && a.share.share_count) || 0;
