@@ -4299,7 +4299,7 @@ Function Shortcodes
     $("#share").jsSocials({
       showLabel: false,
       showCount: false,
-      shares: ["facebook", "twitter", "pinterest"],
+      shares: ["facebook", "twitter", "email"],
     });
 
     $(".jssocials-share").wrap(
