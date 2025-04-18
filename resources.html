@@ -27,6 +27,69 @@
       ga("send", "pageview");
     </script>
 
+    <style>
+      /* Mobile-first approach */
+      .content-row.full .one_half {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .content-row.full .one_half img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Desktop styles */
+      @media (min-width: 992px) {
+        .content-row.full {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: stretch;
+        }
+
+        .content-row.full .one_half {
+          width: 50%;
+          padding: 0 15px;
+          box-sizing: border-box;
+        }
+
+        /* Equal height for image and text */
+        .content-row.full .one_half > div {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .content-row.full .one_half img {
+          height: 300px; /* Fixed height for desktop */
+          object-fit: cover;
+          width: 100%;
+        }
+
+        .content-row.full .one_half.last {
+          margin-top: 45px;
+        }
+      }
+
+      /* Adjustments for medium screens */
+      @media (max-width: 991px) and (min-width: 768px) {
+        .content-row.full .one_half img {
+          max-width: 80%;
+          margin: 0 auto;
+        }
+      }
+
+      /* Special adjustments for very small screens */
+      @media (max-width: 480px) {
+        .content-row.full .one_half img {
+          max-width: 100%;
+        }
+      }
+    </style>
+
     <title>
       AppleRugs Website - A Sustainable and Eco Friendly rug company
     </title>
@@ -35,7 +98,12 @@
       name="description"
       content="A sustainable and eco-friendly rugs"
     />
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  
+
     <meta name="author" content="AppleRugs" />
+
     <meta charset="UTF-8" />
     <link rel="icon" type="image/ico" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
@@ -491,6 +559,7 @@
                         <div class="one_half">
                           <h5>Hemp</h5>
                           <img
+                            class="img"
                             style="height: 290px; width: 370px"
                             src="./images/shortcodes/Hemp.jpg"
                             alt=""
