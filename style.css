@@ -3001,7 +3001,7 @@ html,body {
 	}
 	
 	#main .button-wrap.left {
-		float:none;
+		/* float:none; */
 		left:-24px;		
 	}
 	
