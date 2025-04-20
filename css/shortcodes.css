@@ -1508,6 +1508,10 @@ a.link:hover::before {
   box-sizing: border-box;
 }
 
+.parallax-image{
+
+}
+
 .parallax-image-content .outer {
   width: 100%;
   margin: 0 auto;
@@ -3924,6 +3928,7 @@ input[type="submit"] {
   position: relative;
   background-size: cover;
   background-position: center;
+  opacity: 0.8  ;
 }
 
 .parallax-video-wrapper {
