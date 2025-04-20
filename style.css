@@ -343,11 +343,12 @@ html,body {
 	}
 	
 	.light-content li, .dark-section li {
-		color: #ccc;
+		/* color: #ccc; */
+		color: white;
 	}
 	
 	.light-content .light-section li {
-		color: #444;
+		color: white;
 	}
 	
 	figure {
