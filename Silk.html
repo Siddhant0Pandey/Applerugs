@@ -46,12 +46,67 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
   </head>
 
   <body
     class="hidden hidden-ball smooth-scroll rounded-borders hero-below-caption"
     data-primary-color="#fa821d"
   >
+  <!-- WhatsApp Icon -->
+  <div class="whatsapp-icon">
+    <a href="https://wa.me/9841255592" target="_blank">
+        <div class="icon-background">
+            <i class="fab fa-whatsapp"></i> 
+        </div>
+    </a>
+  </div>
+  <style>
+    .whatsapp-icon {
+        position: fixed;  
+        bottom: 0;        
+        right: 0;      
+        margin-bottom: 60px;
+        margin-right: 20px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .icon-background {
+        background-color: white;  
+        padding: 7px;          
+        border-radius: 50%;  
+        height: 40px;
+        width: 40px;  
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);  
+        transition: transform 0.5s ease-in-out;
+        animation: bounce 2.5s ease infinite; 
+    }
+    
+    /* WhatsApp icon */
+    .icon-background i {
+        color: #df2020;  
+        font-size: 36px;
+        position: relative;  
+        left: 5px;
+        top: 1px;
+        transition: transform 1s ease-in-out;  
+    }
+    
+    
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        30% { transform: translateY(-50px); }
+        50% { transform: translateY(0); }
+        70% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+    
+            </style>
+    <!-- End of WhatsApp -->
     <main>
       <!-- Preloader -->
       <div class="preloader-wrap" data-centerLine="Loading">
