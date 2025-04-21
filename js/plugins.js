@@ -2223,7 +2223,7 @@
       linkedin: {
         label: "Share",
         logo: "fa-brands fa-linkedin",
-        shareUrl: "https://www.linkedin.com/company/codesala404/",
+        shareUrl: "https://www.linkedin.com/company/apple-rugs/",
         countUrl:
           "https://www.linkedin.com/countserv/count/share?format=jsonp&url={url}&callback=?",
         getCount: function (a) {
