@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AppleRugs Blog</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: #7F1416;
+      color: #fff;
+    }
+
+    header {
+      background-color: #4b0f10;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .main-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 2rem;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #5f0f12;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .sidebar h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li:hover {
+      color: #f2d479;
+    }
+
+    .blog-section {
+      flex: 3;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .blog-card {
+      background-color: white;
+      color: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 1rem;
+    }
+
+    .blog-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-content p {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #4b0f10;
+      color: #ccc;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AppleRugs</h1>
+  </header>
+
+  <div class="main-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Categories</h2>
+      <ul>
+        <li>Artisan Stories</li>
+        <li>Traditional Techniques</li>
+        <li>Interior Inspiration</li>
+        <li>Rug Care Tips</li>
+        <li>Behind the Scenes</li>
+      </ul>
+    </aside>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="blog-grid">
+
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde" alt="Rug weaving">
+          <div class="blog-content">
+            <h3>The Art of Handwoven Rugs</h3>
+            <p>Explore the centuries-old techniques our artisans use to create each masterpiece by hand.</p>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1578898888223-921d51c0c1ff" alt="Artisan family">
+          <div class="blog-content">
+            <h3>Meet the Makers</h3>
+            <p>Get to know the families and individuals behind every rug—preserving tradition and supporting livelihoods.</p>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1604068549390-2f64a2b85c67" alt="Modern rug space">
+          <div class="blog-content">
+            <h3>Rugs in Modern Spaces</h3>
+            <p>Discover how AppleRugs complement minimalist, boho, and luxury interiors alike.</p>
+          </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card">
+          <img src="https://images.unsplash.com/photo-1598300053837-a53fba748591" alt="Rug layout">
+          <div class="blog-content">
+            <h3>Rugs in Modern Spaces</h3>
+            <p>Discover how AppleRugs complement minimalist, boho, and luxury interiors alike.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 AppleRugs. All rights reserved.
+  </footer>
+
+</body>
+</html>
