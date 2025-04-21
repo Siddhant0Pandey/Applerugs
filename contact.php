@@ -37,8 +37,6 @@ if (trim($name) == '') {
 $comments = htmlspecialchars($comments);
 
 
-
-
 $mail = new PHPMailer(true);
 
 try {
