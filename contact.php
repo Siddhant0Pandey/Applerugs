@@ -1,5 +1,13 @@
 <?php
 
+require __DIR__ . '/vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load configuration from the config file
+$config = require 'config.php'; 
+
 if (!$_POST) exit;
 
 function isEmail($email) {
@@ -28,13 +36,8 @@ if (trim($name) == '') {
 
 $comments = htmlspecialchars($comments);
 
-// Load configuration from the config file
-$config = require 'config.php'; 
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
