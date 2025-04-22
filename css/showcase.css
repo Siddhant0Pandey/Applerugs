@@ -1609,7 +1609,8 @@
 
   .snap-slider-captions .slide-title,
   .snap-slider-captions .slide-subtitle {
-    font-size: 18px;
+    font-size: 12px;
+    padding-bottom: 20px;
   }
 
   .external-categories .slide-cat {
